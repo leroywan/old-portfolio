@@ -35,6 +35,28 @@ if (menuState == true) {
 	}
 }
 
+// Navigation
+var frontPage = document.getElementById('front-page');
+var aboutPage = document.getElementById('about-page');
+var projectPage = document.getElementById('project-page');
+var contactNav = document.getElementById('contact-page');
+
+var aboutNav = document.getElementById('about-nav');
+var projectNav = document.getElementById('project-nav');
+var contactNav = document.getElementById('contact-nav');
+	
+contactNav.onclick = function(){
+	window.scrollTo(0, 590+aboutPage.clientHeight - 10 + projectPage.clientHeight);
+}
+
+aboutNav.onclick = function(){
+	window.scrollTo(0, window.innerHeight-5);
+}
+
+projectNav.onclick = function(){
+	window.scrollTo(0, 590+aboutPage.clientHeight - 10)
+}
+
 
 var eventListener = function(){
 	if (window.scrollY < window.innerHeight-120 && window.innerWidth < 550){
@@ -63,5 +85,7 @@ var colorChange = function(line, color){
 		colorChange(line, color);
 	});
 };
+
+
 
 

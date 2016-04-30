@@ -14,9 +14,9 @@
 		<div id="nav-button" class="animated fadeInRight"><svg id="menu-bar" width="100%" height="100%"></svg></div>
 		<nav>
 			<ul id="menu" class="animated fadeInRight">
-				<li class="hvr-sweep-to-right">About</li>
-				<li class="hvr-sweep-to-right">Projects</li>
-				<li class="hvr-sweep-to-right">Contact Me</li>
+				<li id="about-nav" class="hvr-sweep-to-right">About</li>
+				<li id="project-nav" class="hvr-sweep-to-right">Projects</li>
+				<li id="contact-nav" class="hvr-sweep-to-right">Contact Me</li>
 			</ul>
 		</nav>
 <!-- 		<nav>
@@ -35,33 +35,49 @@
 		<div id="about-page" class="page">
 			<h1 class="heading">About Me</h1>
 			<p>
-	Contrary to popular belief, Lorem Ipsum is not sIt has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-	The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+	Hi, I am Leroy Wan and I love creating things. I built this website as a way to showcase some of my work as well as to keep track of what I have accomplished so far in terms of learning web development.  I started programming because I love the feeling of being able to create anything I want with just a few numbers and letters.  Other hobbies I have include playing piano and guitar, camping out in the forest, and bicycle touring.  I am currently a 3rd year student studying geological engineering at Queen's University and I am pursuing a career in environmental engineering with an emphasis on geophysical modeling.  Feel free to stroll around this website and look at some of the things I have made.  I am always learning new technology so projects will frequently be updated!</p>
 		</div>
 		<div id="project-page" class="page">
 			<h1 class="heading">Projects</h1>
 			<div id="projects">
 				<div class="project-container">
+					<h2>Ahhh!</h2>
 					<img src="./imgs/cliff_game_thumbnail.png" class="thumbnail"/>
-					<p class="description hvr-rectangle-out">This is project 1</p>
+					<p class="description">Dodge the clouds and try to stay alive! This is a game created using pure javascript/HTML5/CSS3 as a way to learn more about HTML5 canvas. </p>
+					<div class="project-links"><a href="http://www.leroywan.com/CliffGame">Play Game</a><a href="https://github.com/leroywan/CliffGame">Git Repository</a></div>
 				</div>
 				<div class="project-container">
+					<h2>Waypoint</h2>
 					<img src="./imgs/waypoint_2.png" class="thumbnail"/>
-					<p class="description">This is project 2</p>
-				</div>
+					<p class="description">Waypoint is a trip planning web app that allows users to compare the price, review, and location of nearby activities by the simple input of different waypoints and a buget. This project won 2nd place in QHacks out of 400 participants across different Universities in Ontario.</p>
+					<div><a href="https://github.com/lyninx/WayPoint">Git Repository</a></div>
+				</div class="project-links">
 				<div class="project-container">
+					<h2>Triangles!</h2>
 					<img src="./imgs/triangles_thumbnail.png" class="thumbnail"/>
-					<p class="description">This is project 3</p>
-				</div>
+					<p class="description">This project is created as a background animation to learn more about animating objects using pure javascript</p>
+					<div><a href="http://www.leroywan.com/triangles">View Project</a><a href="https://github.com/leroywan/canvasBackgrounds">Git Repository</a></div>
+				</div class="project-links">
 				<div class="project-container">
+					<h2>Fancy-CSS</h2>
 					<img src="./imgs/fancy_css_thumbnail.png" class="thumbnail"/>
-					<p class="description">This is project 4</p>
-				</div>
+					<p class="description">Fancy-CSS is a CSS library that allows developers to create seamless transitions within their DOM elements once the hover event is fired. </p>
+					<div><a href="http://www.leroywan.com/Fancy-CSS">View Library</a><a href="https://github.com/leroywan/fancy-css">Git repository</a></div>
+				</div class="project-links">
 			</div>
 		</div>
 		<div id="contact-page" class="page">
 			<h1 class="heading">Contact Me</h1>
+			<div class="contact-info">Email: <a>leroywan@gmail.com</a> </div>
+			<div class="contact-info">Github: <a>https://github.com/leroywan</a> </div>
+
+			<form action="https://formspree.io/leroywan@gmail.com"
+			      method="POST">
+			    <input class="form name" type="text" name="name" placeholder="Your Name">
+			    <input class="form email" type="email" name="_replyto" placeholder="Your Email">
+			    <textarea class="form message" name="message" placeholder="Your Message"></textarea>
+			    <input class="form submit" type="submit" value="Send">
+			</form>
 		</div>
 	</main>
 	<footer>

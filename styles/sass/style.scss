@@ -27,7 +27,8 @@ $small-screen: 350px;
 
 $blue: #2d6095;
 $aqua-blue: #206F88;
-$green: #008e00;
+$green: #40983e;
+$grey: #333333;
 
 
 /* =====================================================
@@ -221,7 +222,6 @@ $header-height: 9vh;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
@@ -239,7 +239,7 @@ $header-height: 9vh;
   left: 0;
   right: 0;
   bottom: 0;
-  background: $green;
+  background: $grey;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 0 50%;
@@ -317,6 +317,16 @@ body {
 	font-weight: 400;
 }
 
+
+@media screen and (min-width: $lg-screen){
+
+	body {
+		font-size: $small-font;
+	}
+
+}
+
+
 /* =====================================================
 					ANIMATIONS/TRANSITIONS
 =======================================================*/
@@ -332,7 +342,7 @@ header {
 	position: fixed;
 	width: 100%;
 	height: $header-height;
-	background: rgba(255, 255, 255, 0.8);
+	background: rgba(255, 255, 255, 0.9);
 	color: black;
 }
 
@@ -358,6 +368,7 @@ header {
 }
 
 #menu-bar {
+	font-family: $title-font;
 	height: 0.8*$header-height;
 	width: 0.8*$header-height;
 	cursor: pointer;
@@ -389,7 +400,7 @@ header {
 		padding: 10px;
 		border-bottom: 1px solid white;
 		transition: color 0.5s;
-		background: rgba(222,222,222, 0.9);
+		background: rgba(233,233,233, 0.9);
 		z-index: 2000;
 	}
 
@@ -415,6 +426,8 @@ nav {
 	display: block;
 	text-align: center;
 }
+
+
 /* =====================================================
 					MAIN 
 =======================================================*/
@@ -453,7 +466,13 @@ main {
 
 
 
-@media screen and (min-width: $md-screen){
+@media screen and (min-width: $lg-screen){
+
+	#front-page {
+		h1 {
+			font-size: $extra-large-font;
+		}
+	}
 
 	#menu {
 		display: block;
@@ -462,7 +481,9 @@ main {
 		font-size: 1.6em;
 
 		li {
+			padding: 6px;
 			display: inline-block;
+			border-bottom: none;
 		}
 	}
 
@@ -476,7 +497,13 @@ main {
 =======================================================*/
 
 #about-page {
+	background: $blue;
+	color: white;
+	padding: 10px;
 
+	h1 {
+		padding: 5px;
+	}
 }
 
 
@@ -485,14 +512,112 @@ main {
 					PROJECTS
 =======================================================*/
 
+#project-page {
+	background: $green;
+	color: white;
+	padding: 20px;
+}
+
 #projects {
 	display: flex;
 	flex-direction: column;
 
 	.project-container {
+		border-bottom: solid 2px $grey;
+
+		h2 {
+			font-style: italic;
+		}
+
+		a {
+			font-size: 1em;
+			padding-right: 40px;
+			color: beige;
+		}
+
+		a:hover {
+			color: orange;
+			cursor: pointer;
+		}
+	}
+
+	.project-container:last-child {
+		border-bottom: none;
 	}
 }
 
+@media screen and (min-width: $lg-screen){
+
+	#projects {
+		display: flex;
+		flex-direction: row;
+
+		.project-container {
+			flex: 1;
+			padding: 10px;
+			display: flex;
+			flex-direction: column;
+			border: none;
+		}
+
+		.thumbnail {
+			height: 180px;
+		}
+
+		.description {
+			flex: 1;
+		}
+
+		.project-links{
+			padding-top: 100px;
+			flex: 1;
+		}
+		
+		a {
+			display: block;
+		}
+	}	
+}
+
+/* =====================================================
+					CONTACT
+=======================================================*/
+
+#contact-page {
+	background: $blue;
+	color: white;
+	height: 100%;
+	padding: 20px;
+}
+
+.form {
+	padding: 0;
+	display: block;
+	margin: 10px;
+	width: 85%;
+	border-style: none;
+}
+
+.form.message {
+	height:80px;
+}
+
+@media screen and (min-width: $lg-screen){
+
+	.form {
+		padding: 10px;
+		width: 95%;
+	}
+
+	.form.message {
+
+		height: 160px;
+	}
+
+	.form.submit {
+		width: 97%
+	}
+}
 
 /* =====================================================
 					FOOTER
@@ -501,7 +626,9 @@ main {
 footer {
 	padding-left: $left-space;
 	padding-right: $right-space;
-	background: lightgreen;
+	background: $grey;
+	text-align: center;
+	color: white;
 }
 
 
@@ -547,8 +674,13 @@ footer {
 	font-family: $title-font;
 	font-weight: 600;
 	padding-bottom: 5px;
-	border-bottom: 1px solid black;
+	border-bottom: 3px solid white;
+	margin: 0;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
 }
+
 
 .content {
 	font-family: 'muli';
@@ -570,3 +702,10 @@ footer {
 	width: 100%;
 	height: 100%;
 }
+
+.contact-info {
+	padding-top: 20px;
+}
+
+
+
