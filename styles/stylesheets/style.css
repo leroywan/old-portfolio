@@ -1,0 +1,524 @@
+/* =====================================================
+					FONTS
+=======================================================*/
+/* =====================================================
+					RESPONSIVE
+=======================================================*/
+/* =====================================================
+					COLOUR PALETTE
+=======================================================*/
+/* =====================================================
+					LAYOUT
+=======================================================*/
+/* =====================================================
+					MIXINS
+=======================================================*/
+/* =====================================================
+					DIST
+=======================================================*/
+/* line 59, ../sass/style.scss */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* line 86, ../sass/style.scss */
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 2s;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/* line 111, ../sass/style.scss */
+.fadeOut {
+  animation-name: fadeIn;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+/* line 145, ../sass/style.scss */
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+/* line 179, ../sass/style.scss */
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+/* line 212, ../sass/style.scss */
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+/* Sweep To Right */
+/* line 219, ../sass/style.scss */
+.hvr-sweep-to-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+/* line 234, ../sass/style.scss */
+.hvr-sweep-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #008e00;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+/* line 254, ../sass/style.scss */
+.hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+  color: white;
+  cursor: pointer;
+}
+
+/* line 258, ../sass/style.scss */
+.hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/* line 263, ../sass/style.scss */
+.hvr-rectangle-out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  background: #e1e1e1;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+/* line 279, ../sass/style.scss */
+.hvr-rectangle-out:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098d1;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+/* line 297, ../sass/style.scss */
+.hvr-rectangle-out:hover, .hvr-rectangle-out:focus, .hvr-rectangle-out:active {
+  color: white;
+}
+
+/* line 300, ../sass/style.scss */
+.hvr-rectangle-out:hover:before, .hvr-rectangle-out:focus:before, .hvr-rectangle-out:active:before {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+/* =====================================================
+					GLOBAL
+=======================================================*/
+/* line 311, ../sass/style.scss */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Muli", sans-serif;
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+}
+
+/* =====================================================
+					ANIMATIONS/TRANSITIONS
+=======================================================*/
+/* =====================================================
+					HEADER
+=======================================================*/
+/* line 330, ../sass/style.scss */
+header {
+  z-index: 5000;
+  position: fixed;
+  width: 100%;
+  height: 9vh;
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+
+/* line 339, ../sass/style.scss */
+#title {
+  display: inline-block;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.5em;
+  font-weight: 400;
+  letter-spacing: 5px;
+  position: absolute;
+  left: 15px;
+  margin: 0;
+  padding: 0;
+  animation-duration: 0.8s;
+}
+
+/* line 353, ../sass/style.scss */
+#nav-button {
+  z-index: 5000;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+}
+
+/* line 360, ../sass/style.scss */
+#menu-bar {
+  height: 7.2vh;
+  width: 7.2vh;
+  cursor: pointer;
+  transition: fill 0.5s;
+  -webkit-transition: fill 0.5s;
+}
+
+/* line 368, ../sass/style.scss */
+#menu-bar:hover {
+  fill: #008e00;
+}
+
+/* line 372, ../sass/style.scss */
+#menu-bar:hover #front-page {
+  display: none;
+}
+
+/* line 377, ../sass/style.scss */
+#menu {
+  display: none;
+  list-style: none;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  right: 0;
+  top: 9vh;
+  animation-duration: 0.6s;
+}
+/* line 387, ../sass/style.scss */
+#menu li {
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid white;
+  transition: color 0.5s;
+  background: rgba(222, 222, 222, 0.9);
+  z-index: 2000;
+}
+/* line 396, ../sass/style.scss */
+#menu li:last-child {
+  border-bottom: none;
+}
+/* line 400, ../sass/style.scss */
+#menu li:hover {
+  color: white;
+}
+
+/* line 407, ../sass/style.scss */
+nav {
+  display: inline-block;
+}
+
+/* line 412, ../sass/style.scss */
+#chevron {
+  z-index: -10;
+  margin-top: 60vh;
+  display: block;
+  text-align: center;
+}
+
+/* =====================================================
+					MAIN 
+=======================================================*/
+/* line 423, ../sass/style.scss */
+main {
+  margin-top: 9vh;
+}
+
+/* line 427, ../sass/style.scss */
+#front-page {
+  animation-name: fadeIn;
+  animation-duration: 3s;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 39vh;
+  text-align: center;
+}
+/* line 435, ../sass/style.scss */
+#front-page h1 {
+  z-index: -10;
+  font-family: "Josefin Sans", sans-serif;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  font-style: italic;
+  letter-spacing: 1px;
+  font-size: 2em;
+  font-weight: 400;
+}
+/* line 448, ../sass/style.scss */
+#front-page h1 span {
+  font-weight: 600;
+}
+
+@media screen and (min-width: 550px) {
+  /* line 458, ../sass/style.scss */
+  #menu {
+    display: block;
+    border: none;
+    top: 0;
+    font-size: 1.6em;
+  }
+  /* line 464, ../sass/style.scss */
+  #menu li {
+    display: inline-block;
+  }
+
+  /* line 469, ../sass/style.scss */
+  #nav-button {
+    display: none;
+  }
+}
+/* =====================================================
+					ABOUT
+=======================================================*/
+/* =====================================================
+					PROJECTS
+=======================================================*/
+/* line 488, ../sass/style.scss */
+#projects {
+  display: flex;
+  flex-direction: column;
+}
+
+/* =====================================================
+					FOOTER
+=======================================================*/
+/* line 501, ../sass/style.scss */
+footer {
+  padding-left: 15px;
+  padding-right: 15px;
+  background: lightgreen;
+}
+
+/* =====================================================
+					CSS CLASSES
+=======================================================*/
+/* line 514, ../sass/style.scss */
+.hidden {
+  display: none;
+}
+
+/* line 518, ../sass/style.scss */
+.blue {
+  color: #2d6095;
+}
+
+/* line 522, ../sass/style.scss */
+.aqua-blue {
+  color: #206F88;
+}
+
+/* line 526, ../sass/style.scss */
+.green {
+  color: #008e00;
+}
+
+/* line 530, ../sass/style.scss */
+.small-font {
+  font-size: 1.2em;
+}
+
+/* line 534, ../sass/style.scss */
+.medium-font {
+  font-size: 1.8em;
+}
+
+/* line 538, ../sass/style.scss */
+.large-font {
+  font-size: 2em;
+}
+
+/* line 542, ../sass/style.scss */
+.extra-large-font {
+  font-size: 3em;
+}
+
+/* line 546, ../sass/style.scss */
+.heading {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+  padding-bottom: 5px;
+  border-bottom: 1px solid black;
+}
+
+/* line 553, ../sass/style.scss */
+.content {
+  font-family: 'muli';
+  font-weight: 400;
+}
+
+/* line 558, ../sass/style.scss */
+.page {
+  padding-left: 15px;
+  padding-right: 15px;
+  flex: 1;
+}
+
+/* line 564, ../sass/style.scss */
+.thumbnail {
+  width: 100%;
+}
+
+/* line 569, ../sass/style.scss */
+.description {
+  width: 100%;
+  height: 100%;
+}

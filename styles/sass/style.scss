@@ -1,0 +1,572 @@
+/* =====================================================
+					FONTS
+=======================================================*/
+
+$default-font:'Muli', sans-serif;
+$title-font: 'Josefin Sans', sans-serif ;
+
+$small-font: 1.2em;
+$medium-font: 1.8em;
+$large-font: 2.0em;
+$extra-large-font: 3em;
+
+
+/* =====================================================
+					RESPONSIVE
+=======================================================*/
+
+$xlg-screen: 1300px;
+$lg-screen: 900px;
+$md-screen: 550px;
+$small-screen: 350px;
+
+
+/* =====================================================
+					COLOUR PALETTE
+=======================================================*/
+
+$blue: #2d6095;
+$aqua-blue: #206F88;
+$green: #008e00;
+
+
+/* =====================================================
+					LAYOUT
+=======================================================*/
+
+$left-space: 15px;
+$right-space: 15px;
+$header-height: 9vh;
+
+
+/* =====================================================
+					MIXINS
+=======================================================*/
+
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+ 
+  // Output standard non-prefixed declaration
+  #{$property}: $value;
+}
+
+/* =====================================================
+					DIST
+=======================================================*/
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.fadeIn {
+	animation-name: fadeIn;
+	animation-duration: 2s;
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+.fadeOut {
+	animation-name: fadeIn;
+	animation-duration: 2s;
+}
+
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+
+/* Sweep To Right */
+.hvr-sweep-to-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-sweep-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $green;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+  color: white;
+  cursor:pointer;
+}
+.hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.hvr-rectangle-out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  background: #e1e1e1;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-rectangle-out:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098d1;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-rectangle-out:hover, .hvr-rectangle-out:focus, .hvr-rectangle-out:active {
+  color: white;
+}
+.hvr-rectangle-out:hover:before, .hvr-rectangle-out:focus:before, .hvr-rectangle-out:active:before {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+
+
+/* =====================================================
+					GLOBAL
+=======================================================*/
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: $default-font;
+	display: flex;
+	flex-direction: column;
+	font-weight: 400;
+}
+
+/* =====================================================
+					ANIMATIONS/TRANSITIONS
+=======================================================*/
+
+
+
+/* =====================================================
+					HEADER
+=======================================================*/
+
+header {
+	z-index: 5000;
+	position: fixed;
+	width: 100%;
+	height: $header-height;
+	background: rgba(255, 255, 255, 0.8);
+	color: black;
+}
+
+#title {
+	display: inline-block;
+	font-family: $title-font;
+	font-size: 2.5em;
+	font-weight: 400;
+	letter-spacing: 5px;
+	position: absolute;
+	left: $left-space;	
+	margin: 0;
+	padding: 0;
+	animation-duration: 0.8s;
+
+}
+
+#nav-button {
+	z-index: 5000;
+	position: absolute;
+	right: 3px;
+	top: 3px;
+}
+
+#menu-bar {
+	height: 0.8*$header-height;
+	width: 0.8*$header-height;
+	cursor: pointer;
+	transition: fill 0.5s;
+	-webkit-transition: fill 0.5s;
+}
+
+#menu-bar:hover {
+	fill: $green;
+}
+
+#menu-bar:hover #front-page {
+	display: none;
+}
+
+
+#menu {
+	display: none;
+	list-style: none;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	right: 0;
+	top: $header-height;
+	animation-duration: 0.6s;
+
+	li {
+		display: block;
+		padding: 10px;
+		border-bottom: 1px solid white;
+		transition: color 0.5s;
+		background: rgba(222,222,222, 0.9);
+		z-index: 2000;
+	}
+
+	li:last-child {
+		border-bottom: none;
+	}
+
+	li:hover {
+		color: white;
+	}
+}
+
+
+
+nav {
+	display: inline-block;
+}
+
+
+#chevron {
+	z-index:-10;
+	margin-top: 60vh;
+	display: block;
+	text-align: center;
+}
+/* =====================================================
+					MAIN 
+=======================================================*/
+
+
+main {
+	margin-top: $header-height;
+}
+
+#front-page {
+	animation-name: fadeIn;
+	animation-duration: 3s;
+	padding-left: $left-space;
+	padding-right: $right-space;
+	height: 39vh;
+	text-align: center;
+
+	h1 {
+		z-index:-10;
+		font-family: $title-font;
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		font-style: italic;
+		letter-spacing: 1px;
+		font-size: $large-font;
+		font-weight: 400;
+
+		span {
+			font-weight: 600;
+		}
+	}
+}
+
+
+
+@media screen and (min-width: $md-screen){
+
+	#menu {
+		display: block;
+		border: none;
+		top: 0;
+		font-size: 1.6em;
+
+		li {
+			display: inline-block;
+		}
+	}
+
+	#nav-button {
+		display: none;
+	}
+}
+
+/* =====================================================
+					ABOUT
+=======================================================*/
+
+#about-page {
+
+}
+
+
+
+/* =====================================================
+					PROJECTS
+=======================================================*/
+
+#projects {
+	display: flex;
+	flex-direction: column;
+
+	.project-container {
+	}
+}
+
+
+/* =====================================================
+					FOOTER
+=======================================================*/
+
+footer {
+	padding-left: $left-space;
+	padding-right: $right-space;
+	background: lightgreen;
+}
+
+
+
+/* =====================================================
+					CSS CLASSES
+=======================================================*/
+
+
+.hidden {
+	display: none;
+}
+
+.blue {
+	color: $blue;
+}
+
+.aqua-blue {
+	color: $aqua-blue;
+}
+
+.green {
+	color: $green;
+}
+
+.small-font {
+	font-size: $small-font;
+}
+
+.medium-font {
+	font-size: $medium-font;
+}
+
+.large-font {
+	font-size: $large-font;
+}
+
+.extra-large-font {
+	font-size: $extra-large-font;
+}
+
+.heading {
+	font-family: $title-font;
+	font-weight: 600;
+	padding-bottom: 5px;
+	border-bottom: 1px solid black;
+}
+
+.content {
+	font-family: 'muli';
+	font-weight: 400;
+}
+
+.page {
+	padding-left: $left-space;
+	padding-right: $right-space;
+	flex: 1;
+}
+
+.thumbnail {
+	width: 100%;
+}
+
+
+.description {
+	width: 100%;
+	height: 100%;
+}
