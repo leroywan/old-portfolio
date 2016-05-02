@@ -510,6 +510,15 @@ main {
 	}
 }
 
+@media screen and (min-width: $lg-screen){
+
+	#about-page {
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+
+}
+
 
 
 /* =====================================================
@@ -617,6 +626,11 @@ main {
 
 	.form.submit {
 		width: 97%
+	}
+
+	#contact-page {
+		padding-left: 10%;
+		padding-right: 10%;
 	}
 }
 

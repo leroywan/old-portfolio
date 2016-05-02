@@ -44,17 +44,26 @@ var contactNav = document.getElementById('contact-page');
 var aboutNav = document.getElementById('about-nav');
 var projectNav = document.getElementById('project-nav');
 var contactNav = document.getElementById('contact-nav');
+
+var closeMenu = function(){
+	setTimeout(function(){
+		menu.style.display = '';
+	}, 00)
+}
 	
 contactNav.onclick = function(){
-	window.scrollTo(0, 590+aboutPage.clientHeight - 10 + projectPage.clientHeight);
+	window.scrollTo(0, 590+aboutPage.clientHeight + projectPage.clientHeight);
+	closeMenu();
 }
 
 aboutNav.onclick = function(){
 	window.scrollTo(0, window.innerHeight-5);
+	closeMenu();
 }
 
 projectNav.onclick = function(){
-	window.scrollTo(0, 590+aboutPage.clientHeight - 10)
+	window.scrollTo(0, window.innerHeight + aboutPage.clientHeight)
+	closeMenu();
 }
 
 
