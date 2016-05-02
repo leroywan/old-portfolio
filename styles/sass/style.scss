@@ -353,10 +353,11 @@ header {
 	font-size: 2.4em;
 	font-weight: 400;
 	letter-spacing: 5px;	
-	position: fixed;
 	margin: 0;
 	padding: 0;
-	padding-top: 5px;
+	height: $header-height;
+    line-height: $header-height;
+    white-space: nowrap;
 	padding-left: $left-space;
 	animation-duration: 0.8s;
 
