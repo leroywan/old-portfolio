@@ -348,7 +348,7 @@ header {
 }
 
 #title {
-	display: inline-block;
+	display: none;
 	font-family: $title-font;
 	font-size: 2.4em;
 	font-weight: 400;
@@ -356,6 +356,7 @@ header {
 	position: fixed;
 	margin: 0;
 	padding: 0;
+	padding-top: 5px;
 	padding-left: $left-space;
 	animation-duration: 0.8s;
 

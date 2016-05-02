@@ -69,7 +69,7 @@ projectNav.onclick = function(){
 
 var eventListener = function(){
 	if (window.scrollY < window.innerHeight-120 && window.innerWidth < 550){
-		title.style.display = 'none';
+		title.style.display = '';
 	} else {
 		title.style.display = 'inline-block';
 	}
