@@ -37,7 +37,7 @@ $grey: #333333;
 
 $left-space: 15px;
 $right-space: 15px;
-$header-height: 9vh;
+$header-height: 53.55px;
 
 
 /* =====================================================
@@ -393,7 +393,6 @@ header {
 	display: none;
 	list-style: none;
 	position: absolute;
-	height: 100%;
 	margin: 0;
 	padding: 0;
 	right: 0;
@@ -401,7 +400,6 @@ header {
 	animation-duration: 0.6s;
 
 	li {
-		height: 100%;
 		display: block;
 		padding: 10px;
 		border-bottom: 1px solid white;
@@ -483,6 +481,7 @@ main {
 	}
 
 	#menu {
+		height: 100%;
 		display: block;
 		border: none;
 		top: 0;
@@ -491,12 +490,14 @@ main {
 		li {
 			text-align: center;
 			padding: 0;
-			padding-top: 1.5vh;
-			padding-bottom:  1.5vh;
 			display: inline-block;
 			border-bottom: none;
 			width: 180px;
+			height: 100%;
 			background: none;
+			height: $header-height;
+    		line-height: $header-height;
+   			white-space: nowrap;
 		}
 	}
 

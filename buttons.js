@@ -74,6 +74,9 @@ var eventListener = function(){
 		title.style.display = 'inline-block';
 	}
 
+	if (window.innerWidth > 550){
+		menu.style.animationPlayState = 'running';
+	}
 	requestAnimFrame(eventListener);
 }
 

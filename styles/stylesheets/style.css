@@ -290,7 +290,7 @@ header {
   z-index: 5000;
   position: fixed;
   width: 100%;
-  height: 9vh;
+  height: 53.55px;
   background: rgba(255, 255, 255, 0.9);
   color: black;
 }
@@ -304,8 +304,8 @@ header {
   letter-spacing: 5px;
   margin: 0;
   padding: 0;
-  height: 9vh;
-  line-height: 9vh;
+  height: 53.55px;
+  line-height: 53.55px;
   white-space: nowrap;
   padding-left: 15px;
   animation-duration: 0.8s;
@@ -322,8 +322,8 @@ header {
 /* line 373, ../sass/style.scss */
 #menu-bar {
   font-family: "Josefin Sans", sans-serif;
-  height: 7.2vh;
-  width: 7.2vh;
+  height: 42.84px;
+  width: 42.84px;
   padding-top: 5px;
   cursor: pointer;
   transition: fill 0.5s;
@@ -345,16 +345,14 @@ header {
   display: none;
   list-style: none;
   position: absolute;
-  height: 100%;
   margin: 0;
   padding: 0;
   right: 0;
-  top: 9vh;
+  top: 53.55px;
   animation-duration: 0.6s;
 }
-/* line 403, ../sass/style.scss */
+/* line 402, ../sass/style.scss */
 #menu li {
-  height: 100%;
   display: block;
   padding: 10px;
   border-bottom: 1px solid white;
@@ -363,21 +361,21 @@ header {
   z-index: 2000;
   width: 120px;
 }
-/* line 414, ../sass/style.scss */
+/* line 412, ../sass/style.scss */
 #menu li:last-child {
   border-bottom: none;
 }
-/* line 418, ../sass/style.scss */
+/* line 416, ../sass/style.scss */
 #menu li:hover {
   color: white;
 }
 
-/* line 425, ../sass/style.scss */
+/* line 423, ../sass/style.scss */
 nav {
   display: inline-block;
 }
 
-/* line 430, ../sass/style.scss */
+/* line 428, ../sass/style.scss */
 #chevron {
   z-index: -10;
   margin-top: 60vh;
@@ -388,12 +386,12 @@ nav {
 /* =====================================================
 					MAIN 
 =======================================================*/
-/* line 443, ../sass/style.scss */
+/* line 441, ../sass/style.scss */
 main {
-  margin-top: 9vh;
+  margin-top: 53.55px;
 }
 
-/* line 447, ../sass/style.scss */
+/* line 445, ../sass/style.scss */
 #front-page {
   animation-name: fadeIn;
   animation-duration: 3s;
@@ -402,7 +400,7 @@ main {
   height: 39vh;
   text-align: center;
 }
-/* line 455, ../sass/style.scss */
+/* line 453, ../sass/style.scss */
 #front-page h1 {
   z-index: -10;
   font-family: "Josefin Sans", sans-serif;
@@ -416,37 +414,40 @@ main {
   font-size: 2em;
   font-weight: 400;
 }
-/* line 468, ../sass/style.scss */
+/* line 466, ../sass/style.scss */
 #front-page h1 span {
   font-weight: 600;
 }
 
 @media screen and (min-width: 900px) {
-  /* line 480, ../sass/style.scss */
+  /* line 478, ../sass/style.scss */
   #front-page h1 {
     font-size: 3em;
   }
 
-  /* line 485, ../sass/style.scss */
+  /* line 483, ../sass/style.scss */
   #menu {
+    height: 100%;
     display: block;
     border: none;
     top: 0;
     font-size: 1.6em;
   }
-  /* line 491, ../sass/style.scss */
+  /* line 490, ../sass/style.scss */
   #menu li {
     text-align: center;
     padding: 0;
-    padding-top: 1.5vh;
-    padding-bottom: 1.5vh;
     display: inline-block;
     border-bottom: none;
     width: 180px;
+    height: 100%;
     background: none;
+    height: 53.55px;
+    line-height: 53.55px;
+    white-space: nowrap;
   }
 
-  /* line 503, ../sass/style.scss */
+  /* line 504, ../sass/style.scss */
   #nav-button {
     display: none;
   }
@@ -454,19 +455,19 @@ main {
 /* =====================================================
 					ABOUT
 =======================================================*/
-/* line 512, ../sass/style.scss */
+/* line 513, ../sass/style.scss */
 #about-page {
   background: #2d6095;
   color: white;
   height: auto;
 }
-/* line 516, ../sass/style.scss */
+/* line 517, ../sass/style.scss */
 #about-page p {
   margin: 0;
 }
 
 @media screen and (min-width: 900px) {
-  /* line 523, ../sass/style.scss */
+  /* line 524, ../sass/style.scss */
   #about-page {
     height: auto;
     padding-left: 10%;
@@ -476,51 +477,51 @@ main {
 /* =====================================================
 					PROJECTS
 =======================================================*/
-/* line 537, ../sass/style.scss */
+/* line 538, ../sass/style.scss */
 #project-page {
   background: #40983e;
   color: white;
 }
 
-/* line 542, ../sass/style.scss */
+/* line 543, ../sass/style.scss */
 #projects {
   display: flex;
   flex-direction: column;
   -webkit-flex-direction: column;
 }
-/* line 547, ../sass/style.scss */
+/* line 548, ../sass/style.scss */
 #projects .project-container {
   padding-bottom: 15px;
   border-bottom: solid 2px #333333;
 }
-/* line 551, ../sass/style.scss */
+/* line 552, ../sass/style.scss */
 #projects .project-container h2 {
   font-style: italic;
 }
-/* line 555, ../sass/style.scss */
+/* line 556, ../sass/style.scss */
 #projects .project-container a {
   font-size: 1em;
   padding-right: 40px;
   color: beige;
 }
-/* line 561, ../sass/style.scss */
+/* line 562, ../sass/style.scss */
 #projects .project-container a:hover {
   color: orange;
   cursor: pointer;
 }
-/* line 567, ../sass/style.scss */
+/* line 568, ../sass/style.scss */
 #projects .project-container:last-child {
   border-bottom: none;
 }
 
 @media screen and (min-width: 900px) {
-  /* line 574, ../sass/style.scss */
+  /* line 575, ../sass/style.scss */
   #projects {
     display: flex;
     flex-direction: row;
     -webkit-flex-direction: row;
   }
-  /* line 579, ../sass/style.scss */
+  /* line 580, ../sass/style.scss */
   #projects .project-container {
     flex: 1;
     padding: 10px;
@@ -529,15 +530,15 @@ main {
     -webkit-flex-direction: column;
     border: none;
   }
-  /* line 588, ../sass/style.scss */
+  /* line 589, ../sass/style.scss */
   #projects .thumbnail {
     height: 180px;
   }
-  /* line 592, ../sass/style.scss */
+  /* line 593, ../sass/style.scss */
   #projects .description {
     flex: 1;
   }
-  /* line 596, ../sass/style.scss */
+  /* line 597, ../sass/style.scss */
   #projects a {
     display: block;
   }
@@ -545,20 +546,20 @@ main {
 /* =====================================================
 					CONTACT
 =======================================================*/
-/* line 606, ../sass/style.scss */
+/* line 607, ../sass/style.scss */
 #contact-page {
   height: auto;
   background: #2d6095;
   color: white;
 }
 
-/* line 612, ../sass/style.scss */
+/* line 613, ../sass/style.scss */
 form {
   padding-top: 15px;
   padding-bottom: 15px;
 }
 
-/* line 617, ../sass/style.scss */
+/* line 618, ../sass/style.scss */
 .form {
   padding: 0;
   display: block;
@@ -568,19 +569,19 @@ form {
   border-style: none;
 }
 
-/* line 626, ../sass/style.scss */
+/* line 627, ../sass/style.scss */
 .form.email, .form.name {
   font-size: 1.2em;
   height: 35px;
 }
 
-/* line 631, ../sass/style.scss */
+/* line 632, ../sass/style.scss */
 .form.message {
   font-size: 1.5em;
   height: 180px;
 }
 
-/* line 636, ../sass/style.scss */
+/* line 637, ../sass/style.scss */
 .form.submit {
   background: white;
   font-family: "Muli", sans-serif;
@@ -590,7 +591,7 @@ form {
   height: 40px;
 }
 
-/* line 645, ../sass/style.scss */
+/* line 646, ../sass/style.scss */
 .form.submit:hover {
   color: white;
   cursor: pointer;
@@ -598,27 +599,27 @@ form {
 }
 
 @media screen and (min-width: 900px) {
-  /* line 653, ../sass/style.scss */
+  /* line 654, ../sass/style.scss */
   .form {
     width: 100%;
   }
 
-  /* line 657, ../sass/style.scss */
+  /* line 658, ../sass/style.scss */
   .form.email, .form.name {
     height: 50px;
   }
 
-  /* line 661, ../sass/style.scss */
+  /* line 662, ../sass/style.scss */
   .form.message {
     height: 160px;
   }
 
-  /* line 666, ../sass/style.scss */
+  /* line 667, ../sass/style.scss */
   .form.submit {
     height: 40px;
   }
 
-  /* line 670, ../sass/style.scss */
+  /* line 671, ../sass/style.scss */
   #contact-page {
     height: 100vh;
     padding-left: 10%;
@@ -628,7 +629,7 @@ form {
 /* =====================================================
 					FOOTER
 =======================================================*/
-/* line 681, ../sass/style.scss */
+/* line 682, ../sass/style.scss */
 footer {
   padding-left: 15px;
   padding-right: 15px;
@@ -640,47 +641,47 @@ footer {
 /* =====================================================
 					CSS CLASSES
 =======================================================*/
-/* line 696, ../sass/style.scss */
+/* line 697, ../sass/style.scss */
 .hidden {
   display: none;
 }
 
-/* line 700, ../sass/style.scss */
+/* line 701, ../sass/style.scss */
 .blue {
   color: #2d6095;
 }
 
-/* line 704, ../sass/style.scss */
+/* line 705, ../sass/style.scss */
 .aqua-blue {
   color: #206F88;
 }
 
-/* line 708, ../sass/style.scss */
+/* line 709, ../sass/style.scss */
 .green {
   color: #40983e;
 }
 
-/* line 712, ../sass/style.scss */
+/* line 713, ../sass/style.scss */
 .small-font {
   font-size: 1.2em;
 }
 
-/* line 716, ../sass/style.scss */
+/* line 717, ../sass/style.scss */
 .medium-font {
   font-size: 1.8em;
 }
 
-/* line 720, ../sass/style.scss */
+/* line 721, ../sass/style.scss */
 .large-font {
   font-size: 2em;
 }
 
-/* line 724, ../sass/style.scss */
+/* line 725, ../sass/style.scss */
 .extra-large-font {
   font-size: 3em;
 }
 
-/* line 728, ../sass/style.scss */
+/* line 729, ../sass/style.scss */
 .heading {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
@@ -692,7 +693,7 @@ footer {
   text-align: center;
 }
 
-/* line 740, ../sass/style.scss */
+/* line 741, ../sass/style.scss */
 .content {
   font-family: 'muli';
   font-weight: 400;
@@ -700,24 +701,24 @@ footer {
   padding-bottom: 15px;
 }
 
-/* line 747, ../sass/style.scss */
+/* line 748, ../sass/style.scss */
 .page {
   padding-left: 15px;
   padding-right: 15px;
   flex: 1;
 }
 
-/* line 753, ../sass/style.scss */
+/* line 754, ../sass/style.scss */
 .thumbnail {
   width: 100%;
 }
 
-/* line 758, ../sass/style.scss */
+/* line 759, ../sass/style.scss */
 .description {
   width: 100%;
 }
 
-/* line 762, ../sass/style.scss */
+/* line 763, ../sass/style.scss */
 .contact-info {
   padding-top: 20px;
 }
