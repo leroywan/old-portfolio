@@ -471,6 +471,7 @@ main {
 
 @media screen and (min-width: $lg-screen){
 
+
 	#front-page {
 		h1 {
 			font-size: $extra-large-font;
@@ -506,16 +507,16 @@ main {
 #about-page {
 	background: $blue;
 	color: white;
-	padding: 10px;
-
-	h1 {
-		padding: 5px;
+	height: auto;
+	p {
+		margin: 0;
 	}
 }
 
 @media screen and (min-width: $lg-screen){
 
 	#about-page {
+		height: auto;
 		padding-left: 10%;
 		padding-right: 10%;
 	}
@@ -531,7 +532,6 @@ main {
 #project-page {
 	background: $green;
 	color: white;
-	padding: 20px;
 }
 
 #projects {
@@ -540,6 +540,7 @@ main {
 	-webkit-flex-direction: column;
 
 	.project-container {
+		padding-bottom: $left-space;
 		border-bottom: solid 2px $grey;
 
 		h2 {
@@ -598,28 +599,58 @@ main {
 =======================================================*/
 
 #contact-page {
+	height: auto;
 	background: $blue;
 	color: white;
-	padding: 20px;
+}
+
+form {
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 .form {
 	padding: 0;
 	display: block;
-	margin: 10px;
-	width: 85%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 100%;
 	border-style: none;
 }
 
+.form.email, .form.name {
+	font-size: $small-font;
+	height: 35px;
+}
+
 .form.message {
-	height:80px;
+	font-size: 1.5em;
+	height: 180px;
+}
+
+.form.submit {
+	background: white;
+	font-family: $default-font;
+	color: $blue;
+	font-weight: 600;
+	font-size: $small-font;
+	height: 40px;
+}
+
+.form.submit:hover {
+	color: white;
+	cursor: pointer;
+	background: $green;
 }
 
 @media screen and (min-width: $lg-screen){
 
 	.form {
-		padding: 10px;
-		width: 95%;
+		width: 100%;
+	}
+
+	.form.email, .form.name {
+		height: 50px;
 	}
 
 	.form.message {
@@ -628,10 +659,11 @@ main {
 	}
 
 	.form.submit {
-		width: 97%
+		height: 40px;
 	}
 
 	#contact-page {
+		height: 100vh;
 		padding-left: 10%;
 		padding-right: 10%;
 	}
@@ -694,8 +726,8 @@ footer {
 	padding-bottom: 5px;
 	border-bottom: 3px solid white;
 	margin: 0;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	text-align: center;
 }
 
@@ -703,6 +735,8 @@ footer {
 .content {
 	font-family: 'muli';
 	font-weight: 400;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 .page {
