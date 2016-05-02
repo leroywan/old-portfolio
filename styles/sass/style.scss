@@ -351,14 +351,13 @@ header {
 	top: 10;
 	display: inline-block;
 	font-family: $title-font;
-	font-size: 2.5em;
+	font-size: 2.4em;
 	font-weight: 400;
 	letter-spacing: 5px;
 	position: absolute;
 	left: $left-space;	
 	margin: 0;
 	padding: 0;
-	padding-top: 5px;
 	animation-duration: 0.8s;
 
 }
@@ -366,7 +365,7 @@ header {
 #nav-button {
 	z-index: 5000;
 	position: absolute;
-	right: 3px;
+	right: 15px;
 	top: 3px;
 }
 
