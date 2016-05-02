@@ -348,16 +348,14 @@ header {
 }
 
 #title {
-	top: 10;
 	display: inline-block;
 	font-family: $title-font;
 	font-size: 2.4em;
 	font-weight: 400;
-	letter-spacing: 5px;
-	position: absolute;
-	left: $left-space;	
+	letter-spacing: 5px;	
 	margin: 0;
 	padding: 0;
+	padding-left: $left-space;
 	animation-duration: 0.8s;
 
 }
@@ -366,7 +364,7 @@ header {
 	z-index: 5000;
 	position: absolute;
 	right: 15px;
-	top: 3px;
+	top: 2px;
 }
 
 #menu-bar {
@@ -395,6 +393,7 @@ header {
 	margin: 0;
 	padding: 0;
 	right: 0;
+	width: 140px;
 	top: $header-height;
 	animation-duration: 0.6s;
 
