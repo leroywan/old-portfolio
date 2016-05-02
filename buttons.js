@@ -52,7 +52,7 @@ var closeMenu = function(){
 }
 	
 contactNav.onclick = function(){
-	window.scrollTo(0, 590+aboutPage.clientHeight + projectPage.clientHeight);
+	window.scrollTo(0, window.innerHeight + aboutPage.clientHeight + projectPage.clientHeight);
 	closeMenu();
 }
 
@@ -71,7 +71,7 @@ var eventListener = function(){
 	if (window.scrollY < window.innerHeight-120 && window.innerWidth < 550){
 		title.style.display = 'none';
 	} else {
-		title.style.display = 'block';
+		title.style.display = 'inline-block';
 	}
 
 	requestAnimFrame(eventListener);

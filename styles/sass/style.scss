@@ -353,6 +353,7 @@ header {
 	font-size: 2.4em;
 	font-weight: 400;
 	letter-spacing: 5px;	
+	position: fixed;
 	margin: 0;
 	padding: 0;
 	padding-left: $left-space;
@@ -393,7 +394,6 @@ header {
 	margin: 0;
 	padding: 0;
 	right: 0;
-	width: 140px;
 	top: $header-height;
 	animation-duration: 0.6s;
 
@@ -404,6 +404,7 @@ header {
 		transition: color 0.5s;
 		background: rgba(233,233,233, 0.9);
 		z-index: 2000;
+		width: 120px;
 	}
 
 	li:last-child {
@@ -483,9 +484,13 @@ main {
 		font-size: 1.6em;
 
 		li {
-			padding: 6px;
+			text-align: center;
+			padding: 0;
+			padding-top: 12px;
 			display: inline-block;
 			border-bottom: none;
+			width: 180px;
+			background: none;
 		}
 	}
 
