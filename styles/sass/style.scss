@@ -3,7 +3,7 @@
 =======================================================*/
 
 $default-font:'Muli', sans-serif;
-$title-font: 'Josefin Sans', sans-serif ;
+$title-font: 'Muli', sans-serif ;
 
 $small-font: 1.2em;
 $medium-font: 1.8em;
@@ -25,9 +25,11 @@ $small-screen: 350px;
 					COLOUR PALETTE
 =======================================================*/
 
-$blue: #2d6095;
+// $blue: #2d6095;
+$blue: black;
 $aqua-blue: #206F88;
-$green: #40983e;
+// $green: #40983e;
+$green: #666666;
 $grey: #333333;
 
 
@@ -390,6 +392,7 @@ header {
 
 
 #menu {
+	font-family: $title-font;
 	display: none;
 	list-style: none;
 	position: absolute;
@@ -399,6 +402,7 @@ header {
 	top: $header-height;
 	animation-duration: 0.6s;
 
+
 	li {
 		display: block;
 		padding: 10px;
@@ -407,6 +411,12 @@ header {
 		background: rgba(233,233,233, 0.9);
 		z-index: 2000;
 		width: 120px;
+		font-size: 0.7em;
+
+		h2 {
+			margin: 0;
+			font-weight: 400;
+		}
 	}
 
 	li:last-child {
@@ -461,10 +471,13 @@ main {
 		font-style: italic;
 		letter-spacing: 1px;
 		font-size: $large-font;
-		font-weight: 400;
+
+		a {
+			z-index: 10000;
+		}
 
 		span {
-			font-weight: 600;
+
 		}
 	}
 }
@@ -476,7 +489,7 @@ main {
 
 	#front-page {
 		h1 {
-			font-size: $extra-large-font;
+			font-size: 1.9em;
 		}
 	}
 
@@ -498,7 +511,14 @@ main {
 			height: $header-height;
     		line-height: $header-height;
    			white-space: nowrap;
+
+   			h2 {
+   				margin: 0;
+   				font-weight: 600;
+   				font-size: 0.9em;
+   			}
 		}
+
 	}
 
 	#nav-button {

@@ -84,9 +84,9 @@ eventListener();
 
 
 var s = Snap("#menu-bar");
-var topLine = s.rect(0, 0, 50, 8);
-var midLine = s.rect(0, 15, 50, 8);
-var botLine = s.rect(0, 30, 50, 8);
+var topLine = s.rect(0, 0, 50, 6);
+var midLine = s.rect(0, 15, 50, 6);
+var botLine = s.rect(0, 30, 50, 6);
 
 var snapMenuBar = s.group(topLine, midLine, botLine);
 
