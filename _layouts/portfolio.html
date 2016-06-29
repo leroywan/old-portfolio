@@ -7,6 +7,9 @@ layout: default
 		{{ content }}
 	</div>
 	<div class="photo-gallery">
+		<h1>
+			{{ page }}
+		</h1>
 		{% for image in page.images %}
 			<div class="img-container">
 				<div class="overlay {{ image.overlay_color }}">
