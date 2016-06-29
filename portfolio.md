@@ -3,7 +3,7 @@ layout: portfolio
 title: Work
 permalink: /portfolio/
 images: 
-  - path: leroywan.github.io/assets/photo-gallery/mr_square.svg
+  - path: http://leroywan.github.io/assets/photo-gallery/mr_square.svg
     title: Cliff Game
     category: Game
     description: #
