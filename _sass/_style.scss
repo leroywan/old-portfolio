@@ -1,0 +1,252 @@
+/************************************************************
+
+================== MAIN NAVIGATION ==========================
+
+*************************************************************/
+
+
+body {
+	padding-top: $header-height;
+	margin: 0;
+	height: 1000px;
+	font-family: $font1;
+}
+
+header.main-header {
+
+	z-index: 1000;
+	display: block;
+	width: 100%;
+	height: $header-height;
+	position: fixed;
+	top: 0;
+	background: rgba(255, 255, 255, 0.9);
+
+	#site-logo img {
+		position: absolute;
+		height: $header-height - 10px;
+		top: 0;
+		left: 5px;
+	}
+
+}
+
+
+$menu-width: 40px;
+$menu-line-height: 8px;
+#menu-button {
+	z-index: 20000;
+	display: inline-block;
+	position: absolute;
+	cursor: pointer;
+	top: 18px;
+	right: 18px;
+	transition: transform 0.1s ease-in-out;
+
+	div {
+		height: $menu-line-height;
+		width: $menu-width;
+		background: black;
+		margin-top: $menu-line-height;
+		margin-bottom: $menu-line-height;
+		border-radius: 15%;
+	}
+
+
+	#top-line {
+		margin-top: 0;
+		transition: height 0.2s ease-out, background 0.2s ease-in;
+
+		#top-line1 {
+			position: absolute;
+			height: 0;
+			width: $menu-width;
+			background: white;
+			margin: 0;
+			transition: transform 0.2s ease-in-out, height 0.2s ease-in-out;
+		}
+
+		#top-line2 {
+			position: absolute;
+			height: 0;
+			width: $menu-width;
+			background: white;
+			margin: 0;
+			transition: transform 0.2s ease-in-out, height 0.2s ease-in-out;
+		}
+	}
+
+	#mid-line {
+		transition: height 0.2s ease-in-out, background 0.2s ease-in;
+		
+	}
+
+	#btm-line {
+		transition: height 0.2s ease-in-out, background 0.2s ease-in;
+		margin-bottom: 0;
+		
+	}
+}
+
+
+.menu-active #menu-button:hover {
+	div {
+		background: red;
+	}
+}
+
+
+.main-navigation {
+	position: fixed;
+	transition: left 0.5s cubic-bezier(1,0.55,0.55,1);
+	display: block;
+	height: 100vh;
+	width: 100%;
+	z-index: 100;
+	background: orange;
+	left: 100%;
+
+	.link-container {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	a {
+		font-size: 2.5em;
+		font-weight: 400;
+		text-decoration: none;
+		display: block;
+		text-align: center;
+		line-height: $header-height;
+		margin: $header-height/2;
+		height: $header-height;
+		color: $color1;
+
+
+	}
+}
+
+.menu-active .main-navigation {
+	left: 0;
+	top: 0;
+}
+
+
+/************************************************************
+
+================== PORTFOLIO       ==========================
+
+*************************************************************/
+
+.blur {
+	-webkit-filter: blur(3px);
+	filter: blur(5px);
+}
+
+.green {
+	background: rgba(40, 190, 40, 0.8);
+}
+
+.red {
+	background: rgba(255, 40, 40, 0.8);
+}
+
+.blue {
+	background: rgba(40, 40, 255, 0.8);
+}
+
+.orange {
+
+}
+	
+.portfolio {
+
+	.intro {
+		margin-bottom: 50px;
+	}
+
+	.photo-gallery {
+		display: block;
+		width: 100%;
+		text-align: center;
+
+		div.img-container {	
+			display: inline-block;
+			width: 250px;
+			height: 250px;
+			overflow: hidden;
+			position: relative;
+			margin-bottom: 20px;
+
+
+			.overlay {
+				z-index: 10;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 250px;
+				height: 250px;
+				cursor: pointer;
+
+				h2 {
+					margin: 0;
+					color: white;
+					font-weight: 800px;
+					line-height: 250px;
+				}
+
+				h5 {
+					color: white;
+					margin:-60px;
+				}
+			}
+
+
+			img {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 100%;
+				cursor: pointer;
+			}
+		}
+
+	}
+
+
+}
+
+
+
+
+@media only screen and (min-width: $mobile) {
+
+	header .main-navigation {
+		float: right;
+		height: $header-height;
+
+
+		a {
+			margin: 0;
+			font-size: 1.3em;
+			display: inline-block;
+			text-align: center;
+			width: $header-height;
+			line-height: $header-height;
+			padding-left: 20px;
+			padding-right: 20px;
+			color: black;
+			text-decoration: none;
+
+		}
+	}
+
+
+
+}
+
+

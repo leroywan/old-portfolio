@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<article class="portfolio">
+
+	<div class="intro">
+		{{ content }}
+	</div>
+	<div class="photo-gallery">
+		{% for image in page.images %}
+			<div class="img-container"><div class="overlay {{ image.overlay_color }}"><h2>{{ image.title }}</h2><h5>{{ image.category }}</h5></div><img class="blur" src="{{ image.path }}"></div>
+		{% endfor %}
+	</div>
+
+</article>

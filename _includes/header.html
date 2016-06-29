@@ -1,0 +1,26 @@
+<header class="main-header">
+
+  <div class="navigation-container">
+    <a id="site-logo" href="{{ site.baseurl }}/">
+      <img src="{{ site.baseurl }}/assets/imgs/leroywan_title.gif"/>
+    </a>
+    <nav class="main-navigation">
+        <div class="link-container">
+        {% for my_page in site.pages %}
+          {% if my_page.title %}
+          <a class="" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+          {% endif %}
+        {% endfor %}
+        </div>
+    </nav>
+  </div>
+  <div id="menu-button">
+    <div id="top-line">
+      <div id="top-line1"></div>
+      <div id="top-line2"></div>
+    </div>
+    <div id="mid-line"></div>
+    <div id="btm-line"></div>
+  </div>
+
+</header>

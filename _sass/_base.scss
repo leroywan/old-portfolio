@@ -1,0 +1,44 @@
+// FONTS
+@font-face {
+  font-family: "CooperHewitt-Light";
+  src: url(../assets/fonts/CooperHewitt-Light.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "Mr-Dafoe-Regular";
+  src: url(../assets/fonts/MrDafoe-Regular.ttf) format("truetype");
+}
+
+
+
+// SCREEN SIZES
+
+$mobile: 420px;
+
+
+$header-height: 80px;
+$color1: black;
+$color2: black;
+$font1: 'Quicksand';
+
+h1 {
+	font-size: 2em;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: $font1;
+	font-weight: 400;
+}
+
+
+.default-padding {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+@media(min-width: $mobile) {
+	.default-padding {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+}
