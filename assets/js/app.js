@@ -37,3 +37,6 @@ $('#menu-button').click(function(){
     }
     console.log(menuState);
 })
+
+
+var s = Snap('#svg');

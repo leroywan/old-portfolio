@@ -10,23 +10,26 @@ body {
 	margin: 0;
 	height: 1000px;
 	font-family: $font1;
+	// background: rgb(255,252,233);
+	overflow-x: hidden;
 }
 
 header.main-header {
-
+	background: rgba(255, 255, 255, 0.9);
 	z-index: 1000;
 	display: block;
 	width: 100%;
 	height: $header-height;
 	position: fixed;
 	top: 0;
-	background: rgba(255, 255, 255, 0.9);
 
 	#site-logo img {
-		position: absolute;
+		position: fixed;
 		height: $header-height - 10px;
-		top: 0;
-		left: 5px;
+		top: 5px;
+		left: 10px;
+		height: 60px;
+		width: 60px;
 	}
 
 }
@@ -37,16 +40,16 @@ $menu-line-height: 8px;
 #menu-button {
 	z-index: 20000;
 	display: inline-block;
-	position: absolute;
+	position: fixed;
 	cursor: pointer;
-	top: 18px;
-	right: 18px;
+	top: 14px;
+	right: 14px;
 	transition: transform 0.1s ease-in-out;
 
 	div {
 		height: $menu-line-height;
 		width: $menu-width;
-		background: black;
+		background: rgb(65, 65, 65);
 		margin-top: $menu-line-height;
 		margin-bottom: $menu-line-height;
 		border-radius: 15%;
@@ -105,6 +108,7 @@ $menu-line-height: 8px;
 	z-index: 100;
 	background: orange;
 	left: 100%;
+	font-family: "Josefin Sans";
 
 	.link-container {
 		position: absolute;
@@ -131,6 +135,61 @@ $menu-line-height: 8px;
 .menu-active .main-navigation {
 	left: 0;
 	top: 0;
+}
+
+/************************************************************
+
+==================   FRONT PAGE      ==========================
+
+*************************************************************/
+
+@keyframes load-caption {
+	0% {
+		opacity: 0;
+		top: 65%;
+	}
+
+	50% {
+		opacity: 0;
+		top: 65%;
+	}
+
+	100% {
+		opacity: 1;
+		top: 55%;
+	}
+}
+
+.front-page {
+	#name-animation {
+		position: absolute;
+		top: 45%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		height: 100px;
+	}
+
+	.caption {
+		position: absolute;
+		top: 55%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-weight: 800;
+		animation: load-caption 3s ease-in-out;
+	}
+
+	.svg-container {
+		
+	}
+
+	#svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		height: 100%;
+		width: 100%;
+	}
 }
 
 
@@ -242,6 +301,13 @@ $menu-line-height: 8px;
 			color: black;
 			text-decoration: none;
 
+		}
+	}
+
+
+	.front-page {
+		#name-animation {
+			height: 170px;
 		}
 	}
 
