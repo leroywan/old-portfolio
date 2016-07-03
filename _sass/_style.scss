@@ -15,13 +15,13 @@ body {
 }
 
 header.main-header {
-	background: rgba(255, 255, 255, 0.9);
 	z-index: 1000;
 	display: block;
 	width: 100%;
 	height: $header-height;
 	position: fixed;
 	top: 0;
+	transition: top 0.2s ease-in-out, background 0.2s ease-in-out;
 
 	#site-logo img {
 		position: fixed;
@@ -46,10 +46,11 @@ $menu-line-height: 8px;
 	right: 14px;
 	transition: transform 0.1s ease-in-out;
 
+
 	div {
 		height: $menu-line-height;
 		width: $menu-width;
-		background: rgb(65, 65, 65);
+		background: white;
 		margin-top: $menu-line-height;
 		margin-bottom: $menu-line-height;
 		border-radius: 15%;
@@ -91,31 +92,36 @@ $menu-line-height: 8px;
 	}
 }
 
+.menu-active {
 
-.menu-active #menu-button:hover {
-	div {
-		background: red;
+	#menu-button div{
+		background: grey;
 	}
+
+}
+
+
+#menu-button:hover #top-line {
+
+	div#top-line1, div#top-line2{
+		background: lightblue;
+	}
+
 }
 
 
 .main-navigation {
 	position: fixed;
-	transition: left 0.5s cubic-bezier(1,0.55,0.55,1);
+	transition: top 0.2s ease-in-out, left 0.5s cubic-bezier(1,0.55,0.55,1);
 	display: block;
 	height: 100vh;
 	width: 100%;
 	z-index: 100;
-	background: orange;
+	background: white;
 	left: 100%;
 	font-family: "Josefin Sans";
+	text-align: center;
 
-	.link-container {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
 
 	a {
 		font-size: 2.5em;
@@ -135,6 +141,51 @@ $menu-line-height: 8px;
 .menu-active .main-navigation {
 	left: 0;
 	top: 0;
+}
+
+.main-navigation {
+	background: wheat;
+
+	.link-container {
+		transform: translateY(25%);
+	}
+
+
+	.Work-nav, .Contact-nav, .Blog-nav {
+		font-size: 1.5em;
+		border: 4px solid white;
+		width: $header-height*2;
+		height: $header-height*2;
+		display: inline-block;
+		margin: 10px;
+	}
+
+	.Work-nav::before, .Contact-nav::before, .Blog-nav::before {
+		content: "";
+		position: absolute;
+		display: block;
+		float: left;
+		text-align: center;
+	  	background-repeat: no-repeat;
+	  	background-position: 50% 80%;
+	  	background-size: $header-height $header-height;
+	    width: $header-height*2;
+	    height: $header-height*2;
+	}
+
+	.Work-nav::before {
+		background-image: url('../assets/icons/work-icon.svg');
+	}
+
+	.Contact-nav::before {
+		background-image: url('../assets/icons/contact-icon.svg');
+	}
+
+	.Blog-nav::before {
+		background-size: $header-height - 10px $header-height - 10px;
+		background-position: 55% 80%;
+		background-image: url('../assets/icons/blog-icon.svg');
+	}
 }
 
 /************************************************************
@@ -160,6 +211,25 @@ $menu-line-height: 8px;
 	}
 }
 
+#home-background {
+	background: url('../assets/imgs/temp-home-background.jpg');
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#home-background-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: darkgreen;
+	opacity: 0.4;
+}
+
 .front-page {
 	#name-animation {
 		position: absolute;
@@ -171,11 +241,14 @@ $menu-line-height: 8px;
 
 	.caption {
 		position: absolute;
-		top: 55%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		text-align: center;
+	    display: block;
+	    width: 100%;
+	    top: 55%;
+	    left: -10px;
 		font-weight: 800;
 		animation: load-caption 3s ease-in-out;
+		color: white;
 	}
 
 	.svg-container {
@@ -284,6 +357,10 @@ $menu-line-height: 8px;
 
 @media only screen and (min-width: $mobile) {
 
+	header.main-header {
+		background: rgba(255, 255, 255, 0.4);
+	}
+
 	header .main-navigation {
 		float: right;
 		height: $header-height;
@@ -293,8 +370,8 @@ $menu-line-height: 8px;
 			margin: 0;
 			font-size: 1.3em;
 			display: inline-block;
-			text-align: center;
-			width: $header-height;
+			text-align: left;
+			width: $header-height*2;
 			line-height: $header-height;
 			padding-left: 20px;
 			padding-right: 20px;
@@ -304,12 +381,55 @@ $menu-line-height: 8px;
 		}
 	}
 
+	.main-navigation {
+		background: wheat;
+
+		.link-container {
+			transform: translateY(0);
+		}
+
+
+		.Work-nav, .Contact-nav, .Blog-nav {
+			font-size: 1.7em;
+			border: none;
+			width: $header-height*3;
+			height: $header-height;
+			display: inline-block;
+			margin: 0;
+		}
+		.Work-nav::before, .Contact-nav::before, .Blog-nav::before {
+			content: "";
+			position: relative;
+			display: block;
+			float: left;
+			text-align: center;
+		  	background-repeat: no-repeat;
+		  	background-position: 50% 50%;
+		  	background-size: $header-height/2 $header-height/2;
+		    width: $header-height;
+		    height: $header-height;
+		}
+
+		.Work-nav::before {
+			background-image: url('../assets/icons/work-icon.svg');
+		}
+
+		.Contact-nav::before {
+			background-image: url('../assets/icons/contact-icon.svg');
+		}
+
+		.Blog-nav::before {
+			background-image: url('../assets/icons/blog-icon.svg');
+		}
+	}
+
 
 	.front-page {
 		#name-animation {
 			height: 170px;
 		}
 	}
+
 
 
 

@@ -1,14 +1,14 @@
-<header class="main-header">
+<header class="main-header scrolling-header">
 
   <div class="navigation-container">
     <a id="site-logo" href="{{ site.baseurl }}/">
-      <img src="{{ site.baseurl }}/assets/imgs/initialLogo.svg"/>
+      <!-- <img src="{{ site.baseurl }}/assets/imgs/initialLogo.svg"/> -->
     </a>
-    <nav class="main-navigation">
+    <nav class="main-navigation scrolling-header">
         <div class="link-container">
         {% for my_page in site.pages %}
           {% if my_page.title %}
-          <a class="" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+          <a class="{{ my_page.title }}-nav" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
           {% endif %}
         {% endfor %}
         </div>

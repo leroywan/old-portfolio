@@ -9,9 +9,9 @@
 	
 		<line display="inline" fill="none" stroke="#FF0000" stroke-width="23" stroke-miterlimit="10" x1="18" y1="300.5" x2="170" y2="300.5"/>
 </g>
-<g id="Layer_2">
-	<polygon fill="none" stroke="#000000" stroke-width="44" stroke-miterlimit="10" points="164.385,553 25.241,302 164.385,53 
-		438.289,53 575.241,303 438.289,553 	"/>
+<g id="Layer_2" display="none">
+	<polygon display="inline" fill="none" stroke="#000000" stroke-width="44" stroke-miterlimit="10" points="164.385,553 25.241,302 
+		164.385,53 438.289,53 575.241,303 438.289,553 	"/>
 </g>
 <g id="Layer_3">
 	<path d="M261.922,217.086l-29.297,71.973h67.676c9.049,0,13.574,3.125,13.574,9.375c0,4.427-1.596,7.861-4.785,10.303
