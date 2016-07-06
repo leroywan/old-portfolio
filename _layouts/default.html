@@ -3,11 +3,11 @@
 
   {% include head.html %}
 
-  <body>
+  <body class="{{ page.title }}-page">
 
     {% include header.html %}
 
-      <div class="content-within-default default-padding">
+      <div class="content-within-default">
         {{ content }}
       </div>
 

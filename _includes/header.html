@@ -4,11 +4,15 @@
     <a id="site-logo" href="{{ site.baseurl }}/">
       <!-- <img src="{{ site.baseurl }}/assets/imgs/initialLogo.svg"/> -->
     </a>
-    <nav class="main-navigation scrolling-header">
+    <nav class="main-navigation scrolling-header slide-in">
         <div class="link-container">
         {% for my_page in site.pages %}
           {% if my_page.title %}
-          <a class="{{ my_page.title }}-nav" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+          <div class="{{ my_page.title }}-nav-container nav-container">
+            <div class='page-icon'></div>
+            <a>{{ my_page.title }}</a>
+            <a href="{{ my_page.url | prepend: site.baseurl }}" class="redirect"></a>
+          </div>
           {% endif %}
         {% endfor %}
         </div>

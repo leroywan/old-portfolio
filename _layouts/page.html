@@ -1,14 +1,17 @@
 ---
 layout: default
 ---
-<article class="">
-
-  <header class="">
-    <h1 class="">{{ page.title }}</h1>
-  </header>
-
-  <div class="">
-    {{ content }}
-  </div>
-
-</article>
+<div class="page-background"></div>
+<div class="page-background-overlay"></div>
+<div class="pixel-overlay"></div>
+<div class="front-page">
+	<div>
+		<h1 class="page-title">{{ page.title }}</h1>
+		<h6 class="page-caption"><span class="type-animation-slow enable-cursor">{{ page.caption }}</span></h6>
+	</div>
+</div>
+<div class="page">
+	<div class="page-content default-padding">
+		{{ content }}
+	</div>
+</div>

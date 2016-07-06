@@ -2,11 +2,12 @@
 layout: page	
 title: Blog
 permalink: /blog/
+caption: Welcome to my blog!
 ---
 
+<div class="blog-content">
 {% for post in site.posts %}
-	<article>
-
+    <div class="blog-post">
         <header>
             <h2><a href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a></h2>
             <span class="date"><i class="icon-clock"></i><time datetime="{{post.date|date:"%F"}}">{{post.date|date:"%b %d, %Y"}}</time></span><br/>
@@ -15,6 +16,7 @@ permalink: /blog/
         </header>
 	
 		<div class="entry">{{ post.excerpt }}</div>
+    </div>
 
-	</article>
 {% endfor %}
+</div>
