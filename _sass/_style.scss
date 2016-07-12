@@ -651,6 +651,7 @@ body.Blog-page, body.Contact-page {
 	.page {
 		position: absolute;
 		top: 100%;
+		width: 100%;
 		left: 0;
 		color: black;
 
@@ -736,10 +737,6 @@ body.Blog-page {
 *************************************************************/
 
 body.Contact-page {
-
-	// .page-background-overlay, .page-background, .front-page, .pixel-overlay {
-	// 	display: none;
-	// }
 
 	.page-background-overlay {
 		z-index: -1;
@@ -1027,6 +1024,10 @@ body.Contact-page {
 		    position: absolute;
 		    top: -70px;
 		    left: 15%;
+
+		    .nav-container {
+		    	margin: 10px;
+		    }
 		}
 	}
 	
