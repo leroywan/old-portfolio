@@ -597,7 +597,9 @@ header .main-navigation {
 ================== 		BLOG       ==========================
 
 *************************************************************/
-
+.pixel-overlay, .page-background, .page-background-overlay{
+	height: 520px;
+}
 body.Blog-page, body.Contact-page {
 
 	.page-background-overlay {
@@ -605,7 +607,6 @@ body.Blog-page, body.Contact-page {
 		position: absolute;
 		top: 0;
 		left: 0;
-		height: 100%;
 		width: 100%;
 		opacity: 0.4;
 		background: turquoise - 120;
@@ -622,7 +623,6 @@ body.Blog-page, body.Contact-page {
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: 50% 0%;
-		height: 100%;
 		width: 100%;
 	}
 
@@ -654,6 +654,7 @@ body.Blog-page, body.Contact-page {
 		width: 100%;
 		left: 0;
 		color: black;
+		background: white;
 
 	}
 }
@@ -743,7 +744,6 @@ body.Contact-page {
 		position: absolute;
 		top: 0;
 		left: 0;
-		height: 100%;
 		width: 100%;
 		opacity: 0.4;
 		background: rgb(30, 100, 80);
@@ -760,7 +760,6 @@ body.Contact-page {
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: 80% 30%;
-		height: 100%;
 		width: 100%;
 	}
 
@@ -852,6 +851,10 @@ body.Contact-page {
 
 
 @media only screen and (min-width: $mobile) {
+	.page-background, .page-background-overlay, .pixel-overlay {
+		height: 100%;
+	}
+
 	.front-page {
 		#name-animation {
 			height: 140px;
@@ -996,6 +999,10 @@ body.Contact-page {
 	}
 
 	body.Blog-page {
+
+		.page {
+			width: 100%;
+		}
 
 		.front-page {
 		    position: absolute;
