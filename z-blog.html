@@ -6,16 +6,16 @@ caption: Welcome to my blog!
 ---
 
 <div class="blog-content">
-{% for post in site.posts %}
+{% for post in site.posts limit:2 %}
     <div class="blog-post">
         <header>
-            <h2><a href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a></h2>
-            <span class="date"><i class="icon-clock"></i><time datetime="{{post.date|date:"%F"}}">{{post.date|date:"%b %d, %Y"}}</time></span><br/>
-            <span class="category"><i class="icon-tag"></i> {{ post.categories | category_links }}</span><br/>
-            <span class="author"><i class="icon-user"></i> {% if post.author %}{{post.author}}{% else %}{{site.author}}{% endif%}</span>
+            <h2><a class="post-title" href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a></h2>
+            <span class="date"><img class="calendar-icon" src="{{ site.baseurl }}/assets/imgs/calendar.svg"></img><time datetime="{{post.date|date:"%F"}}">{{post.date|date:"%b %d, %Y"}}</time></span><br/>
+            <span class="category"><i class="icon-tag"></i>Categories: {{ post.categories | category_links }}</span><br/>
+            <span class="author"><i class="icon-user"></i>By: {% if post.author %}{{post.author}}{% else %}{{site.author}}{% endif%}</span>
         </header>
 	
-		<div class="entry">{{ post.excerpt }}</div>
+		<div class="entry">{{ post.content }}</div>
     </div>
 
 {% endfor %}

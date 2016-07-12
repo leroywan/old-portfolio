@@ -60,7 +60,7 @@ $menu-line-height: 8px;
 	div {
 		height: $menu-line-height;
 		width: $menu-width;
-		background: wheat;
+		background: $color3;
 		margin-top: $menu-line-height;
 		margin-bottom: $menu-line-height;
 		border-radius: 15%;
@@ -144,7 +144,7 @@ $menu-line-height: 8px;
 	position: fixed;
 	transition: top 0.2s ease-in-out;
 	display: block;
-	height: 100vh;
+	height: 100%;
 	width: 100%;
 	z-index: 100;
 	background: $color5;
@@ -332,7 +332,7 @@ header .main-navigation {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: $color4;
+	background: rgba(40, 130, 130, 0.8);
 	opacity: 0.6;
 	// animation: load-color 3s ease-in, diagonal-drop 1s ease-in-out;
 }
@@ -429,7 +429,6 @@ header .main-navigation {
 
 			h1 {
 				font-family: 'Josefin Slab';
-				font-weight: 800;
 				margin: 0;
 				color: white;
 				line-height: 100px;
@@ -452,7 +451,6 @@ header .main-navigation {
 	}
 
 	.featured-work, .recent-post {
-		height: 800px;
 		margin-top: -1px;
 
 		.heading {
@@ -465,6 +463,37 @@ header .main-navigation {
 				margin: 0;
 				line-height: 100px;
 			}
+		}
+
+		.blog-content {
+			padding: 15px;
+
+			header {
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+
+			.blog-title {
+				font-size: 1.4em;
+				color: $color4;
+				text-decoration: none;
+			}
+
+			.blog-post {
+				padding-top: 20px;
+				padding-bottom: 20px;
+
+				.entry {
+					border-left: 2px solid $color4;
+					padding-left: 10px;
+
+					a {
+						text-decoration: none;
+						color: $color4;
+					}
+				}
+			}	
+
 		}
 
 	}
@@ -579,7 +608,7 @@ body.Blog-page, body.Contact-page {
 		height: 100%;
 		width: 100%;
 		opacity: 0.4;
-		background: brown;
+		background: turquoise - 120;
 	}
 
 	.page-background {
@@ -603,7 +632,6 @@ body.Blog-page, body.Contact-page {
 		height: 100%;
 
 		div {
-			margin-top: $header-height*1.6;
 			text-align: center;
 			font-size: 2.4em;
 		}
@@ -627,6 +655,76 @@ body.Blog-page, body.Contact-page {
 		color: black;
 
 	}
+}
+
+body.Blog-page {
+	.blog-content {
+		width: 94%;
+    	padding: 3%;
+
+    	.blog-post {
+    		font-size: 1.2em;
+    		margin-bottom: 80px;
+
+    		.post-title {
+    			display: block;
+    			width: 100%;
+    			font-size: 2em;
+    			font-weight: 800;
+    			color: $color5;
+    			font-family: 'Josefin Sans';
+    		}
+
+    		header {
+    			padding-bottom: 30px;
+    		}
+
+    		.calendar-icon {
+				position: absolute;
+				width: 24px;
+			}
+
+			time {
+				padding-left: 35px;
+			}
+
+    		.entry {
+    		
+    		}
+    	}
+	}
+}
+
+.post {
+	width: 94%;
+	padding: 3%;
+
+	.calendar-icon {
+		position: absolute;
+		width: 24px;
+	}
+
+	time {
+		font-size: 1.2em;
+		padding-left: 35px;
+	}
+
+	.post-title {
+		display: block;
+		width: 100%;
+		font-size: 2em;
+		font-weight: 800;
+		color: $color5;
+		font-family: 'Josefin Sans';
+	}
+
+	.blog-content {
+		font-size: 1.3em;
+
+		.entry {
+
+		}		
+	}
 
 
 }
@@ -638,6 +736,10 @@ body.Blog-page, body.Contact-page {
 *************************************************************/
 
 body.Contact-page {
+
+	// .page-background-overlay, .page-background, .front-page, .pixel-overlay {
+	// 	display: none;
+	// }
 
 	.page-background-overlay {
 		z-index: -1;
@@ -672,7 +774,10 @@ body.Contact-page {
 	}
 
 	.front-page div {
-		margin-top: $header-height*3.5;
+		position: absolute;
+	    left: 50%;
+	    top: 50%;
+	    transform: translate(-50%, -50%);
 	}
 
 	.page {
@@ -689,10 +794,19 @@ body.Contact-page {
 
 		.contact-info {
 			text-align: center;
+			span {
+				font-size: 1.5em;
+			}
+			h2 {
+				font-size: 2em;
+			}
 		}
 
 		.contact-form {
 			text-align: center;
+			h2 {
+				font-size: 2em;
+			}
 
 			$textbox-width: 280px;
 			input, textarea {
@@ -734,9 +848,9 @@ body.Contact-page {
 		
 	}
 
-
-
 }
+
+
 
 
 
@@ -887,15 +1001,35 @@ body.Contact-page {
 	body.Blog-page {
 
 		.front-page {
+		    position: absolute;
+		    height: 100%;
+		    width: 100%;
+		    top: 0;
+		    left: 0;
 
 			div {
-				margin-top: 25vh;
+				position: absolute;
+			    left: 50%;
+			    top: 50%;
+			    transform: translate(-50%, -50%);
 			}
 		}
 
 	}
 
 
+}
+
+@media (max-height: $mobile) {
+	header .main-navigation {
+		.link-container {
+			width: 100%;
+		    position: absolute;
+		    top: -70px;
+		    left: 15%;
+		}
+	}
+	
 }
 
 
