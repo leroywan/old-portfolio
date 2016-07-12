@@ -306,7 +306,7 @@ header .main-navigation {
 }
 
 #home-background, .pixel-overlay, #home-background-overlay {
-	height: 520px;
+	height: 600px;
 }
 
 #home-background {
@@ -382,7 +382,7 @@ header .main-navigation {
 
 	.content-container {
 		position: absolute;
-		top: 520px;
+		top: 600px;
 		left: 0;
 		width: 100%;
 	}
@@ -599,7 +599,7 @@ header .main-navigation {
 
 *************************************************************/
 .pixel-overlay, .page-background, .page-background-overlay{
-	height: 520px;
+	height: 600px;
 }
 body.Blog-page, body.Contact-page {
 
@@ -651,7 +651,7 @@ body.Blog-page, body.Contact-page {
 
 	.page {
 		position: absolute;
-		top: 100%;
+		top: 600px;
 		width: 100%;
 		left: 0;
 		color: black;
@@ -855,6 +855,13 @@ body.Contact-page {
 	.page-background, .page-background-overlay, .pixel-overlay, #home-background, #home-background-overlay {
 		height: 100%;
 	}
+
+	body.Blog-page, body.Contact-page {
+		.page {
+			top: 100%;
+		}
+	}
+	
 
 	.front-page {
 		#name-animation {
