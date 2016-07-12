@@ -305,6 +305,10 @@ header .main-navigation {
 	}
 }
 
+#home-background, .pixel-overlay, #home-background-overlay {
+	height: 520px;
+}
+
 #home-background {
 	background: url('../assets/imgs/me.jpg');
 	background-size: cover;
@@ -314,7 +318,6 @@ header .main-navigation {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
 }
 
 .pixel-overlay {
@@ -322,7 +325,6 @@ header .main-navigation {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
 	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAI0lEQVQIW2NkwAIYYWKampr/r1+/DuaDCZAATBIkgVslurEAVUoMBlzzw4sAAAAASUVORK5CYII=);
 }
 
@@ -331,7 +333,6 @@ header .main-navigation {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
 	background: rgba(40, 130, 130, 0.8);
 	opacity: 0.6;
 	// animation: load-color 3s ease-in, diagonal-drop 1s ease-in-out;
@@ -381,7 +382,7 @@ header .main-navigation {
 
 	.content-container {
 		position: absolute;
-		top: 100%;
+		top: 520px;
 		left: 0;
 		width: 100%;
 	}
@@ -851,7 +852,7 @@ body.Contact-page {
 
 
 @media only screen and (min-width: $mobile) {
-	.page-background, .page-background-overlay, .pixel-overlay {
+	.page-background, .page-background-overlay, .pixel-overlay, #home-background, #home-background-overlay {
 		height: 100%;
 	}
 
@@ -879,6 +880,11 @@ body.Contact-page {
 
 	body.Home-page {
 		background-size: 1000px;
+
+
+		.content-container {
+			top: 100%;
+		}
 	}
 
 	body.Contact-page {
