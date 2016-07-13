@@ -316,12 +316,14 @@ $home-background-color: rgb(35, 140, 130);
 	}
 }
 
+
+
 #home-background, .pixel-overlay, #home-background-overlay {
 	height: 600px;
 }
 
 #home-background {
-	// background: url('../assets/imgs/me3.jpg');
+	background: url("../assets/imgs/me3.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 80% 50%;
@@ -357,6 +359,7 @@ $home-background-color: rgb(35, 140, 130);
 		transform: translate(-50%, -50%);
 		height: 100px;
 	}
+
 
 	.caption {
 		position: absolute;
@@ -606,7 +609,7 @@ body.Blog-page, body.Contact-page {
 		top: 0;
 		left: 0;
 		-webkit-filter: grayscale(100%);
-		// background-image: url("../assets/imgs/typewriter2.jpg");
+		background-image: url("../assets/imgs/typewriter2.jpg");
 		opacity: 0.8;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -743,7 +746,7 @@ body.Contact-page {
 		top: 0;
 		left: 0;
 		-webkit-filter: grayscale(100%);
-		// background-image: url("../assets/imgs/globe2.jpg");
+		background-image: url("../assets/imgs/globe2.jpg");
 		opacity: 0.8;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -852,7 +855,6 @@ body.Contact-page {
 
 	.front-page {
 		#name-animation {
-			height: 140px;
 			top: 50%;
 		}
 
@@ -989,7 +991,7 @@ body.Contact-page {
 
 	.front-page {
 		#name-animation {
-			height: 170px;
+			height: 160px;
 			top: 55%;
 		}
 
