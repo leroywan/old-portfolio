@@ -246,6 +246,17 @@ header .main-navigation {
 ==================   FRONT PAGE      ==========================
 
 *************************************************************/
+$home-background-color: rgb(35, 140, 130);
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
 
 @keyframes load-caption-mobile {
 	0% {
@@ -288,7 +299,7 @@ header .main-navigation {
 	}
 
 	100% {
-		background: #2b4c6e;
+		background: $home-background-color;
 		
 	}
 }
@@ -310,7 +321,7 @@ header .main-navigation {
 }
 
 #home-background {
-	background: url('../assets/imgs/me.jpg');
+	background: url('../assets/imgs/me3.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 80% 50%;
@@ -333,9 +344,9 @@ header .main-navigation {
 	top: 0;
 	left: 0;
 	width: 100%;
-	background: rgba(40, 130, 130, 0.8);
+	background: $home-background-color;
 	opacity: 0.6;
-	// animation: load-color 3s ease-in, diagonal-drop 1s ease-in-out;
+	animation: load-color 3s ease-in, diagonal-drop 1s ease-in-out;
 }
 
 .front-page {
@@ -358,20 +369,6 @@ header .main-navigation {
 		animation: load-caption-mobile 3s ease-in-out;
 		color: white;
 	}
-
-	.svg-container {
-		
-	}
-
-	#svg {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		height: 100%;
-		width: 100%;
-	}
-
 
 }
 
@@ -408,7 +405,6 @@ header .main-navigation {
 
 			p {
 				font-family: 'Josefin Sans';
-				font-weight: 300;
 				margin-left: 15px;
 				margin-right: 15px;
 			}
@@ -514,24 +510,14 @@ header .main-navigation {
 *************************************************************/
 
 .blur {
-	-webkit-filter: blur(3px);
+	-webkit-filter: blur(5px);
 	filter: blur(5px);
+	transition: 1s blur ease-in;
 }
 
-.green {
-	background: rgba(40, 190, 40, 0.8);
-}
-
-.red {
-	background: rgba(255, 40, 40, 0.8);
-}
-
-.blue {
-	background: rgba(40, 40, 255, 0.8);
-}
-
-.orange {
-
+.blur:hover {
+	-webkit-filter: blur(0px);
+	filter: blur(0px);
 }
 	
 .portfolio {
@@ -563,6 +549,7 @@ header .main-navigation {
 				width: 250px;
 				height: 250px;
 				cursor: pointer;
+				background: $color5;
 
 				h2 {
 					margin: 0;
@@ -619,7 +606,7 @@ body.Blog-page, body.Contact-page {
 		top: 0;
 		left: 0;
 		-webkit-filter: grayscale(100%);
-		background-image: url("../assets/imgs/typewriter.jpg");
+		background-image: url("../assets/imgs/typewriter2.jpg");
 		opacity: 0.8;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -756,7 +743,7 @@ body.Contact-page {
 		top: 0;
 		left: 0;
 		-webkit-filter: grayscale(100%);
-		background-image: url("../assets/imgs/globe.jpg");
+		background-image: url("../assets/imgs/globe2.jpg");
 		opacity: 0.8;
 		background-repeat: no-repeat;
 		background-size: cover;

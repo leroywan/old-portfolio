@@ -26,10 +26,3 @@ images:
     overlay_color: green
 ---
 
-<h1 class="type-animation-slow">A Little Poem For You</h1>
-<h3 class="type-animation">
-	Roses are rgb(255, 0, 0);@
-    Violets are #0000ff;@
-    Here are my works;@
-    Hope you like it!;
-</h3>

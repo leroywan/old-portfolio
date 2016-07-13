@@ -1,9 +1,9 @@
 ---
 layout: default
 ---
-<div class="page-background"></div>
+<!-- <div class="page-background"></div>
 <div class="page-background-overlay"></div>
-<div class="pixel-overlay"></div>
+<div class="pixel-overlay"></div> -->
 <div class="page">
 	<article class="portfolio">
 
@@ -12,12 +12,18 @@ layout: default
 		</div>
 		<div class="photo-gallery">
 			{% for image in page.images %}
-				<div class="img-container">
-					<div class="overlay {{ image.overlay_color }}">
-						<h2>{{ image.title }}</h2>
-						<h5>{{ image.category }}</h5>
+				<div class="project">
+					<div class="img-container">
+						<div class="overlay">
+							<h2>{{ image.title }}</h2>
+							<h5>{{ image.category }}</h5>
+						</div>
+						<img class="blur" src="{{ image.path }}">
 					</div>
-					<img class="blur" src="{{ image.path }}">
+					<div class="description">
+						<h2>{{ image.title }}</h2>
+						<p>Lorem IpsumLorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+					</div>
 				</div>
 			{% endfor %}
 		</div>
