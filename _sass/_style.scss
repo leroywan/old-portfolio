@@ -31,6 +31,7 @@ header.main-header {
 	height: $header-height;
 	position: fixed;
 	top: 0;
+	background: rgba(255, 255, 255, 0.9);
 	transition: top 0.2s ease-in-out, background 0.2s ease-in-out;
 
 	#site-logo img {
@@ -60,7 +61,7 @@ $menu-line-height: 8px;
 	div {
 		height: $menu-line-height;
 		width: $menu-width;
-		background: $color3;
+		background: $color5;
 		margin-top: $menu-line-height;
 		margin-bottom: $menu-line-height;
 		border-radius: 15%;
@@ -111,7 +112,7 @@ $menu-line-height: 8px;
 	}
 	
 	#menu-button div{
-		background: black;
+		background: $color5;
 	}
 
 	.slide-in {
@@ -240,6 +241,21 @@ header .main-navigation {
 
 
 }
+
+/************************************************************
+
+==================   FOOTER        ==========================
+
+*************************************************************/
+
+footer.main-footer {
+	text-align: center;
+	span {
+		margin: 25px;
+	}
+}
+
+
 
 /************************************************************
 
@@ -523,26 +539,65 @@ $home-background-color: rgb(35, 140, 130);
 
 *************************************************************/
 
-.portfolio {
+body.Work-page {
+	#menu-button {
+		div {
+			background: $color5;
+		}
+	}
+}
 
-	.categories {
+
+
+#menu-button {
+	div {
+		background: $color5;
+	}
+}
+
+.portfolio {
+	$thumbnail-size: 30vw;
+	$background-color: rgb(230, 230, 230);
+	.projects {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
-		.category {
-			text-align: center;
-			margin: 5px;
-			background: wheat;
+		background: $background-color;
 
-			.projects {
-				height: 0;
-				transition: height 0.2s ease-in;
+		
+		.project {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			margin-bottom: 40px;
+
+			.info {
+				flex: 1;
+				padding-left: 15px;
+				padding-right: 15px;
+				.title {
+					font-weight: 800;
+					color: black;
+				}
+			}
+
+			.thumbnail {
+				flex: 1;
+				display: flex;
+				margin: auto;
+
+				img {
+					margin: 50px;
+					height: $thumbnail-size;
+					max-height: 150px;
+					max-width: 200px;
+				}
 			}
 		}
 
-		.category:hover .projects {
-			height: 100px;
+		.project:nth-child(even) {
+			background: white;
 		}
 	}
 

@@ -6,19 +6,19 @@ layout: default
 <div class="pixel-overlay"></div> -->
 <div class="page">
 	<article class="portfolio">
-		<div class=" categories">
-		{% for category in page.categories %}
-			<div class="category {{ category.class }}">
-				<h2>{{ category.type }}</h2>
-				<div class="projects">
-					{% for project in category.projects %}
-					<div class="project">
-						<p>{{ project.title }}</p>
-					</div>
-					{% endfor %}
+		<div class="projects">
+		{% for project in site.categories.project %}
+			<div class="project">
+				<div class="thumbnail">
+					<img src="{{ project.thumbnail }}"/>
+				</div>
+				<div class="info">
+					<h1><a class="title" href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a></h1>
+					<h3> {{ project.tools }} </h3>
+					<p class="summary"> {{ project.summary }} </p>
 				</div>
 			</div>
 		{% endfor %}
-		</div>
-	</article>
+		</article>
+	</div>
 </div>
