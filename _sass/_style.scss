@@ -341,7 +341,8 @@ $home-background-color: rgb(35, 140, 130);
 	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAI0lEQVQIW2NkwAIYYWKampr/r1+/DuaDCZAATBIkgVslurEAVUoMBlzzw4sAAAAASUVORK5CYII=);
 }
 
-#home-background-overlay {
+
+.pace-done #home-background-overlay {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -351,29 +352,39 @@ $home-background-color: rgb(35, 140, 130);
 	animation: load-color 3s ease-in, diagonal-drop 1s ease-in-out;
 }
 
-.front-page {
+.pace-running {
 	#name-animation {
-		position: absolute;
-		top: 45%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		height: 100px;
+		display: none;
 	}
-
-
-	.caption {
-		position: absolute;
-		text-align: center;
-	    display: block;
-	    width: 100%;
-	    top: 55%;
-	    left: -10px;
-		font-weight: 800;
-		animation: load-caption-mobile 3s ease-in-out;
-		color: white;
-	}
-
 }
+
+.pace-done {
+	.front-page {
+		#name-animation {
+			display: block;
+			position: absolute;
+			top: 45%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			height: 100px;
+		}
+
+
+		.caption {
+			position: absolute;
+			text-align: center;
+		    display: block;
+		    width: 100%;
+		    top: 55%;
+		    left: -10px;
+			font-weight: 800;
+			animation: load-caption-mobile 3s ease-in-out;
+			color: white;
+		}
+
+	}
+}
+
 
 
 .Home-page {
@@ -512,74 +523,28 @@ $home-background-color: rgb(35, 140, 130);
 
 *************************************************************/
 
-.blur {
-	-webkit-filter: blur(5px);
-	filter: blur(5px);
-	transition: 1s blur ease-in;
-}
-
-.blur:hover {
-	-webkit-filter: blur(0px);
-	filter: blur(0px);
-}
-	
 .portfolio {
 
-	.intro {
-		margin-bottom: 50px;
-	}
+	.categories {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		.category {
+			text-align: center;
+			margin: 5px;
+			background: wheat;
 
-	.photo-gallery {
-		display: block;
-		width: 100%;
-		text-align: center;
-
-		div.img-container {	
-			display: inline-block;
-			width: 250px;
-			height: 250px;
-			overflow: hidden;
-			position: relative;
-			margin-bottom: 20px;
-
-
-			.overlay {
-				z-index: 10;
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				width: 250px;
-				height: 250px;
-				cursor: pointer;
-				background: $color5;
-
-				h2 {
-					margin: 0;
-					color: white;
-					font-weight: 800px;
-					line-height: 250px;
-				}
-
-				h5 {
-					color: white;
-					margin:-60px;
-				}
-			}
-
-
-			img {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				width: 100%;
-				cursor: pointer;
+			.projects {
+				height: 0;
+				transition: height 0.2s ease-in;
 			}
 		}
 
+		.category:hover .projects {
+			height: 100px;
+		}
 	}
-
 
 }
 
@@ -852,15 +817,17 @@ body.Contact-page {
 		}
 	}
 	
+	.pace-done {
+		.front-page {
+			#name-animation {
+				height: 130px;
+				top: 50%;
+			}
 
-	.front-page {
-		#name-animation {
-			top: 50%;
-		}
-
-		.caption {
-			top: 65%;
-			animation: load-caption 1.5s ease-in;
+			.caption {
+				top: 65%;
+				animation: load-caption 1.5s ease-in;
+			}
 		}
 	}
 
@@ -988,15 +955,16 @@ body.Contact-page {
 
 	}
 
+	.pace-done {
+		.front-page {
+			#name-animation {
+				height: 160px;
+				top: 55%;
+			}
 
-	.front-page {
-		#name-animation {
-			height: 160px;
-			top: 55%;
-		}
-
-		.caption {
-			top: 65%;
+			.caption {
+				top: 65%;
+			}
 		}
 	}
 

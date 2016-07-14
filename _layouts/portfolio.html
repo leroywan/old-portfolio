@@ -6,27 +6,19 @@ layout: default
 <div class="pixel-overlay"></div> -->
 <div class="page">
 	<article class="portfolio">
-
-		<div class="intro">
-			{{ content }}
-		</div>
-		<div class="photo-gallery">
-			{% for image in page.images %}
-				<div class="project">
-					<div class="img-container">
-						<div class="overlay">
-							<h2>{{ image.title }}</h2>
-							<h5>{{ image.category }}</h5>
-						</div>
-						<img class="blur" src="{{ image.path }}">
+		<div class=" categories">
+		{% for category in page.categories %}
+			<div class="category {{ category.class }}">
+				<h2>{{ category.type }}</h2>
+				<div class="projects">
+					{% for project in category.projects %}
+					<div class="project">
+						<p>{{ project.title }}</p>
 					</div>
-					<div class="description">
-						<h2>{{ image.title }}</h2>
-						<p>Lorem IpsumLorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
-					</div>
+					{% endfor %}
 				</div>
-			{% endfor %}
+			</div>
+		{% endfor %}
 		</div>
-
 	</article>
 </div>
