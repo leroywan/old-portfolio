@@ -249,9 +249,15 @@ header .main-navigation {
 *************************************************************/
 
 footer.main-footer {
+	display: none;
 	text-align: center;
-	span {
-		margin: 25px;
+	height: $header-height;
+	background: $color4;
+	div {
+		display: inline-block;
+		height: 100%;
+		margin-left: 25px;
+		margin-right: 25px;
 	}
 }
 
@@ -547,13 +553,6 @@ body.Work-page {
 	}
 }
 
-
-
-#menu-button {
-	div {
-		background: $color5;
-	}
-}
 
 .portfolio {
 	$thumbnail-size: 30vw;
