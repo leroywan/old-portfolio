@@ -280,37 +280,22 @@ $home-background-color: rgb(35, 140, 130);
 	}
 }
 
-@keyframes load-caption-mobile {
-	0% {
-		opacity: 0;
-		top: 65%;
-	}
-
-	50% {
-		opacity: 0;
-		top: 65%;
-	}
-
-	100% {
-		opacity: 1;
-		top: 55%;
-	}
-}
 
 @keyframes load-caption {
 	0% {
 		opacity: 0;
-		top: 75%;
+		transform: translateY(100px);
 	}
 
 	50% {
 		opacity: 0;
-		top: 75%;
 	}
 
 	100% {
 		opacity: 1;
-		top: 65%;
+		transform: translateY(0px);
+		
+
 	}
 }
 
@@ -328,13 +313,11 @@ $home-background-color: rgb(35, 140, 130);
 
 @keyframes diagonal-drop {
 	0% {
-		left: -100vw;
-		top: -100%;
+		transform: translate(-100vw, -100vh);
 	}
 
 	100% {
-		left: 0;
-		top: 0;
+		transform: translate(0, 0);
 	}
 }
 
@@ -371,7 +354,7 @@ $home-background-color: rgb(35, 140, 130);
 	width: 100%;
 	background: $home-background-color;
 	opacity: 0.6;
-	// animation: load-color 3s ease-in;
+	animation: diagonal-drop 1s ease-in-out;
 }
 
 .pace-running {
@@ -400,7 +383,7 @@ $home-background-color: rgb(35, 140, 130);
 		    top: 55%;
 		    left: -10px;
 			font-weight: 800;
-			// animation: load-caption-mobile 3s ease-in-out;
+			animation: load-caption 3s ease-in-out;
 			color: white;
 		}
 
@@ -880,7 +863,6 @@ body.Contact-page {
 
 			.caption {
 				top: 65%;
-				// animation: load-caption 1.5s ease-in;
 			}
 		}
 	}
