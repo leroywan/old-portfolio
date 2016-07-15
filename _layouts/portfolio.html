@@ -10,12 +10,15 @@ layout: default
 		{% for project in site.categories.project %}
 			<div class="project">
 				<div class="thumbnail">
-					<img src="{{ project.thumbnail }}"/>
+					<a href="{{ project.url }}""><img src="{{ project.thumbnail }}"/></a>
+					<div>
+						<h1><a class="title" href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a></h1>
+						<h3>Tech Tools: <span>{{ project.tools }}</span></h3>
+						<h3>Category: {{ project.type }}</h3>	
+					</div>
 				</div>
 				<div class="info">
-					<h1><a class="title" href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a></h1>
-					<h3> {{ project.tools }} </h3>
-					<p class="summary"> {{ project.summary }} </p>
+					<h3>The Story: </h3><p class="summary">{{ project.summary }} </p>
 				</div>
 			</div>
 		{% endfor %}

@@ -28,6 +28,23 @@ permalink: /
 </div>
 <div class="featured-work">
 	<div class="heading"><h1>Featured Work</h1></div>
+	<div class="projects">
+	{% for project in site.categories.project limit:3 %}
+		<a><div class="project">
+			<h2><a class="title" href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a></h2>
+			<a class="img-container" href="{{ site.baseurl }}{{ project.url }}"><img src="{{ project.thumbnail }}"/></a>
+			<div class="info">
+				<h3>Category: <span>{{ project.type }}</span></h3>
+				{% if project.pageurl %}
+					<h3><a href="{{ project.pageurl }}">Visit Page</a></h3>
+				{% else %}
+					<h3><a href="{{ project.github }}">Visit Github</a></h3>
+				{% endif %}
+			</div>
+		</div>
+
+	{% endfor %}
+	</div>
 
 	
 </div>

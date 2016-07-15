@@ -4,9 +4,12 @@ title:  "Cliff Game"
 date:   2016-07-12 13:02:21 -0400
 categories: project
 type: Game
+pageurl: http://leroywan.github.io/CliffGame
 thumbnail: ../assets/photo-gallery/mr_square.svg
 tools: C++, Javscript
-summary: A game where you fall and dodge clouds.
+summary: |
+  A game where you fall and dodge clouds.
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
 ---
 This is a projectLorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
 Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
