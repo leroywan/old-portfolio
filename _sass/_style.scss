@@ -371,7 +371,7 @@ $home-background-color: rgb(35, 140, 130);
 	width: 100%;
 	background: $home-background-color;
 	opacity: 0.6;
-	animation: load-color 3s ease-in, diagonal-drop 1s ease-in-out;
+	animation: load-color 3s ease-in;
 }
 
 .pace-running {
