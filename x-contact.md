@@ -20,7 +20,7 @@ permalink: /contact/
 		      method="POST">
 		    <input type="text" name="name" placeholder="Enter Your Name">
 		    <input type="email" name="_replyto" placeholder="Enter Your Email">
-		    <textarea placeholder="Your Message"></textarea>
+		    <textarea name="message" placeholder="Your Message"></textarea>
 		    <input class="submit" type="submit" value="Send">
 		</form>
 	</div>
