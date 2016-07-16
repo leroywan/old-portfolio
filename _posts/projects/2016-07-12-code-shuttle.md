@@ -5,6 +5,7 @@ date:   2016-07-12 13:02:21 -0400
 categories: project
 type: Website
 pageurl: http://codeshuttle.ca
+featured: true
 thumbnail: ../assets/photo-gallery/code-shuttle-logo.svg
 tools: C++, Javscript
 summary: |

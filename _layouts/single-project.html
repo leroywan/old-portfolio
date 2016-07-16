@@ -3,13 +3,27 @@ layout: default
 ---
 
 <div class="single-project">
-
 	<div class="info">
 		<h1> {{ page.title }} </h1>
-		<h3> {{ page.tools }} </h3>
+		<div class="thumbnail">
+			<img src="/{{ page.thumbnail }}" />
+		</div>
+		<h3> <strong>Category: {{ page.type }}</strong></h3>
+		<h3 class="summary"> <strong>Summary:</strong><br><br>{{ page.summary }}</h3>
 	</div>
+	{% if page.demo %}
+	<div class="demo">
+		<h3>Demo</h3>
+	</div>
+	{% endif %}
 	<div class="write-up">
-		<p> {{ page.content }} </p>
+		<h3> The Story </h3>
+		<div class="main-content"><p> {{ page.content }} </p></div>
+		{% if page.pageurl %}
+		<h2 class="visit-page" > <a href="{{ page.pageurl }}">Visit Page</a> </h2>
+		{% else %}
+		<h2 class="visit-page" > <a href="{{ page.github }}">Visit Github</a> </h2>
+		{% endif %}
 	</div>
 
 </div>

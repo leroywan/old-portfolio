@@ -5,6 +5,8 @@ date:   2016-07-12 13:02:21 -0400
 categories: project
 type: Game
 pageurl: http://leroywan.github.io/CliffGame
+github: https://github.com/leroywan/CliffGame
+featured: true
 thumbnail: ../assets/photo-gallery/mr_square.svg
 tools: C++, Javscript
 summary: |

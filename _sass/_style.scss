@@ -8,7 +8,6 @@
 body {
 	padding-top: $header-height;
 	margin: 0;
-	height: 1000px;
 	font-family: $font1;
 	// background: rgb(255,252,233);
 	overflow-x: hidden;
@@ -31,7 +30,7 @@ header.main-header {
 	height: $header-height;
 	position: fixed;
 	top: 0;
-	background: rgba(255, 255, 255, 0.9);
+	background: $color5;
 	transition: top 0.2s ease-in-out, background 0.2s ease-in-out;
 
 	#site-logo img {
@@ -61,7 +60,7 @@ $menu-line-height: 8px;
 	div {
 		height: $menu-line-height;
 		width: $menu-width;
-		background: $color5;
+		background: white;
 		margin-top: $menu-line-height;
 		margin-bottom: $menu-line-height;
 		border-radius: 15%;
@@ -110,9 +109,11 @@ $menu-line-height: 8px;
 			border:2px solid white;
 		}
 	}
-	
-	#menu-button div{
-		background: $color5;
+
+	#menu-button {
+		div {
+			background: $color5;
+		}
 	}
 
 	.slide-in {
@@ -408,6 +409,7 @@ $home-background-color: rgb(35, 140, 130);
 			align-items: center;
 			min-height: 300px;
 			color: black;
+			background: rgb(230, 230, 230);
 
 
 			p {
@@ -454,6 +456,26 @@ $home-background-color: rgb(35, 140, 130);
 		}
 	}
 
+	.recent-post {
+		background: rgb(230, 230, 230);	
+
+		div.date {
+			height: 20px;
+			position: relative;
+
+			img {
+				width: 20px;
+			}
+
+			time {
+				position: absolute;
+				transform: translateY(-5px);
+				left: 25px;
+				top: 6px;
+			}
+		}
+	}
+
 	.featured-work, .recent-post {
 		margin-top: -1px;
 
@@ -478,17 +500,17 @@ $home-background-color: rgb(35, 140, 130);
 				flex: 1;
 				display: flex;
 				flex-direction: column;
-				width: 80vw;
+				width: 100%;
 				text-align: center;
-				margin-top: 20px;
-				margin-bottom: 20px;
+				padding-top: 20px;
+				padding-bottom: 20px;
 				border-bottom: 5px solid $color4;
+				background: rgb(230, 230, 230);
 
 				.title {
 					text-decoration: none;
 					font-size: 1.5em;
 					color: $color4;
-					font-weight: 800;
 					margin: 15px;
 				}
 
@@ -577,7 +599,7 @@ $home-background-color: rgb(35, 140, 130);
 body.Work-page {
 	#menu-button {
 		div {
-			background: $color5;
+			
 		}
 	}
 }
@@ -599,7 +621,6 @@ body.Work-page {
 			flex-direction: column;
 			text-align: center;
 			margin-bottom: 40px;
-			padding: 20px;
 
 			.info {
 				flex: 1;
@@ -607,7 +628,6 @@ body.Work-page {
 				padding-right: 15px;
 
 				h3 {
-					margin: 10px;
 					font-size: 1.6em;
 					font-weight: 800;
 				}
@@ -640,7 +660,6 @@ body.Work-page {
 						color: black;
 					}
 					h3 {
-						margin: 10px;
 						font-weight: 800;
 					}	
 				}
@@ -653,6 +672,106 @@ body.Work-page {
 	}
 
 }
+
+
+/*
+==================  SINGLE PROJECT PAGE =====================
+*/
+
+.single-project {
+
+	.info {
+		padding: 15px;
+		min-height: 400px;
+
+		h1 {
+			color: $color4;
+			text-align: center;
+			padding: 10px;
+			font-weight: 800;
+		}
+
+		h3 {
+			text-align: center;
+			font-size: 1em;
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+
+		h3.summary {
+			margin-top: 15px;
+			margin-bottom: 15px;
+			padding: 10px;
+		}
+
+	}
+
+	.thumbnail {
+		text-align: center;
+		img {
+			height: 30vw;
+			margin-top: 30px;
+			margin-bottom: 30px;
+			max-height: 120px;
+		}
+	}
+
+	.visit-page {
+
+		text-align: center;
+		background: $color5;
+		padding: 5px;
+		margin: 50px auto;
+		width: 100px;
+		height: 100px;
+		position: relative;
+		border-radius: 50%;
+
+		a {
+			text-height: 100%;
+			text-decoration: none;
+			color: white;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}		
+	}
+
+	.visit-page:hover {
+		background: $color4;
+	}
+
+
+	.write-up {
+		background: rgb(230, 230, 230);
+		padding-bottom: 20px;
+
+		h3 {
+			background: $color4;
+			color: white;
+			font-size: 1.6em;
+			text-align: center;
+			margin: 0;
+			padding: 5px;
+		}
+
+		h3.summary {
+			
+		}
+
+		.main-content {
+			padding: 15px;
+
+		}
+
+		
+	}
+
+
+}
+
+
 
 /************************************************************
 
@@ -755,6 +874,7 @@ body.Blog-page {
 			}
 
 			time {
+				padding: 5px;
 				padding-left: 35px;
 			}
 
@@ -1159,6 +1279,30 @@ body.Contact-page {
 				}
 			}
 		}
+
+	}
+
+	.single-project {
+		position: absolute;
+		padding-top: $header-height*1.5;
+		top: 0;
+		left: 0;
+
+		.info {
+			min-height: 80vh
+		}
+
+		.write-up {
+			h3 {
+				font-size: 2em;
+				padding: 15px;
+			}
+
+			.summary {
+
+			}
+		}
+
 
 	}
 
