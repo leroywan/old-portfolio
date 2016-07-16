@@ -622,6 +622,33 @@ body.Work-page {
 			text-align: center;
 			margin-bottom: 40px;
 
+			h3.visit-page {
+				background: $color5;
+				display: inline-block;
+				padding: 10px;
+				padding-left: 20px;
+				padding-right: 20px;
+
+				a {
+					color: white;
+					text-decoration: none;	
+				}
+				
+			}
+
+			h3.visit-page:hover{
+				background: $color4;
+			}
+
+			.small-info {
+				margin: 0;
+				margin-bottom: 10px;
+				padding-right: 15px;
+				padding-left: 15px;
+				display: inline-block;
+				font-size: 1.1em;
+			}
+
 			.info {
 				flex: 1;
 				padding-left: 15px;
@@ -630,7 +657,9 @@ body.Work-page {
 				h3 {
 					font-size: 1.6em;
 					font-weight: 800;
+					margin: 10px;
 				}
+
 
 				.summary {
 					margin: 15px;
@@ -1251,7 +1280,8 @@ body.Contact-page {
 			.projects {
 				.project {
 					margin: 0;
-					height: 100vh;
+					padding-top: 20vh;
+					height: 80vh;
 					width: 100%;
 					flex-direction: row;
 					justify-content: center;

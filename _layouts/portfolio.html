@@ -13,12 +13,14 @@ layout: default
 					<a href="{{ project.url }}""><img src="{{ project.thumbnail }}"/></a>
 					<div>
 						<h1><a class="title" href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a></h1>
-						<h3>Tech Tools: <span>{{ project.tools }}</span></h3>
-						<h3>Category: {{ project.type }}</h3>	
+						<h3 class="small-info">Tech Tools: <span>{{ project.tools }}</span></h3>
+						<h3 class="small-info">Category: {{ project.type }}</h3>
 					</div>
 				</div>
 				<div class="info">
-					<h3>Description: </h3><p class="summary">{{ project.summary }} </p>
+					<h3>Description: </h3>	
+					<p class="summary">{{ project.summary }} </p>
+					<h3 class="visit-page"><a href="{{ project.pageurl }}">Visit Page</a></h3>
 				</div>
 			</div>
 		{% endfor %}
