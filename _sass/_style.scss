@@ -650,7 +650,7 @@ body.Work-page {
 
 
 				.summary {
-					margin: 15px;
+					
 				}
 			}
 
@@ -711,14 +711,12 @@ body.Work-page {
 		h3 {
 			text-align: center;
 			font-size: 1em;
-			margin-top: 5px;
-			margin-bottom: 5px;
+			margin-top: 10px;
+			margin-bottom: 10px;
 		}
 
 		h3.summary {
-			margin-top: 15px;
-			margin-bottom: 15px;
-			padding: 10px;
+			text-align: left;
 		}
 
 	}
@@ -1335,6 +1333,8 @@ footer.main-footer {
 		left: 0;
 
 		.info {
+			width: 50%;
+			margin: auto auto;
 			min-height: 80vh
 		}
 
@@ -1344,8 +1344,21 @@ footer.main-footer {
 				padding: 15px;
 			}
 
-			.summary {
+			.main-content {
+				display: inline-block;
+				width: 60%;
+				padding: 30px;
+				margin-left: 15px;
+			}
 
+			.visit-page {
+				display: inline-block;
+				margin: 0;
+				margin-left: 10%;
+			}
+
+			.visit-page:hover {
+				cursor: pointer;
 			}
 		}
 
