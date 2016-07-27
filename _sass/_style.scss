@@ -13,7 +13,7 @@ body {
 	overflow-x: hidden;
 
 	h1 {
-		font-family: "Josefin Slab";
+		font-family: $font1;
 	}
 }
 
@@ -151,7 +151,7 @@ $menu-line-height: 8px;
 	z-index: 100;
 	background: $color5;
 	left: 100%;
-	font-family: "Josefin Sans";
+	font-family: $font1;
 	text-align: center;
 
 }
@@ -394,14 +394,13 @@ $home-background-color: rgb(35, 140, 130);
 		div.about-me, div.what-do {
 			width: 100%;
 			display: flex;
-			align-items: center;
-			min-height: 300px;
+			min-height: 200px;
 			color: black;
 			background: rgb(230, 230, 230);
 
 
 			p {
-				font-family: 'Josefin Sans';
+				font-family: $font1;
 				margin-left: 15px;
 				margin-right: 15px;
 			}
@@ -422,7 +421,7 @@ $home-background-color: rgb(35, 140, 130);
 			}
 
 			h1 {
-				font-family: 'Josefin Slab';
+				font-family: $font1;
 				margin: 0;
 				color: white;
 				line-height: 100px;
@@ -660,14 +659,25 @@ body.Work-page {
 				margin: auto;
 				flex-direction: column;
 
-				img {
-					margin-left: 50px;
-					margin-right: 50px;
-					height: $thumbnail-size;
-					max-height: 150px;
-					max-width: 200px;
-					padding: 20px;
+				a {
+					text-decoration: none;
+					img {
+						margin-left: 50px;
+						margin-right: 50px;
+						height: $thumbnail-size;
+						max-height: 150px;
+						max-width: 200px;
+						padding: 20px;
+					}
+
+					h2 {
+						font-size: 3.2em;
+						color: black;
+					}
 				}
+
+				
+
 
 				div {
 					margin-bottom: 30px;
@@ -876,7 +886,7 @@ body.Blog-page {
     			font-size: 2em;
     			font-weight: 800;
     			color: $color5;
-    			font-family: 'Josefin Sans';
+    			font-family: $font1;
     		}
 
     		header {
@@ -924,7 +934,7 @@ body.Blog-page {
 		font-size: 2em;
 		font-weight: 800;
 		color: $color5;
-		font-family: 'Josefin Sans';
+		font-family: $font1;
 	}
 
 	.blog-content {
@@ -1013,7 +1023,7 @@ body.Contact-page {
 
 			$textbox-width: 280px;
 			input, textarea {
-				font-family: 'Josefin Sans';
+				font-family: $font1;
 				border: none;
 				margin: 0 auto;
 				display: block;
@@ -1198,6 +1208,7 @@ footer.main-footer {
 				min-height: 150px;
 				flex: 1;
 				height: 25vw;
+				align-items: center;
 
 			}
 

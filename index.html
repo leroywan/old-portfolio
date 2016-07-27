@@ -37,9 +37,9 @@ permalink: /
 			<div class="info">
 				<h3>Category: <span>{{ project.type }}</span></h3>
 				{% if project.pageurl %}
-					<h3><a href="{{ project.pageurl }}">Visit Page</a></h3>
+					<h3><a target="_blank" href="{{ project.pageurl }}">Visit Page</a></h3>
 				{% else %}
-					<h3><a href="{{ project.github }}">Visit Github</a></h3>
+					<h3><a target="_blank" href="{{ project.github }}">Visit Github</a></h3>
 				{% endif %}
 			</div>
 		</div>

@@ -1,13 +1,14 @@
 ---
 layout: single-project
-title:  "Waypoint"
-date:   2016-06-12 13:02:21 -0400
+title:  "Type-Animation"
+date:   2016-07-12 13:02:21 -0400
 categories: project
-type: Web Application
-featured: false
-github: https://github.com/lyninx/WayPoint
-thumbnail: ../assets/photo-gallery/waypoint-icon.svg
-tools: Node.js, MongoDB, Express.js, Angular.js, SCSS
+type: Developer Tool
+featured: true
+pageurl: http://codeshuttle.ca/demo/type-animation
+github: https://github.com/leroywan/type-animation
+thumbnail: ../assets/photo-gallery/type-animation-icon.svg
+tools: JavaScript
 summary: |
   The best travel planning app in the world! Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
 
