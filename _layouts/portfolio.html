@@ -7,12 +7,13 @@ layout: default
 <div class="page">
 	<article class="portfolio">
 		<div class="projects">
-		{% for project in site.categories.project %}
+		{% assign sorted_projects = site.categories.project | sort:"name" %}
+		{% for project in sorted_projects reversed %}
 			<div class="project">
 				<div class="thumbnail">
 					<a href="{{ project.url }}"">
 						{% if project.thumbnail %}
-						<img src="{{ project.thumbnail }}"/>
+						<img class="bounce" src="{{ project.thumbnail }}"/>
 						{% else %}
 						<h2><strong>{{ project.title }}</strong></h2>
 						{% endif %}
@@ -26,11 +27,14 @@ layout: default
 				<div class="info">
 					<h3>Description: </h3>	
 					<p class="summary">{{ project.summary }} </p>
-					{% if project.pageurl %}
-					<h3 class="visit-page"><a target="_blank" href="{{ project.pageurl }}">Visit Page</a></h3>
-					{% else %}
-					<h3 class="visit-page"><a target="_blank" href="{{ project.github }}">Visit Github</a></h3>
-					{% endif %}
+					<div class="links">
+						<a href="{{ project.url }}"><h3 class="visit-page">Details</h3></a>
+						{% if project.pageurl %}
+						<a target="_blank" href="{{ project.pageurl }}"><h3 class="visit-page">Visit Project</h3></a>
+						{% else %}
+						<a target="_blank" href="{{ project.github }}"><h3 class="visit-page">Visit Github</h3></a>
+						{% endif %}
+					</div>
 				</div>
 			</div>
 		{% endfor %}

@@ -30,7 +30,6 @@ header.main-header {
 	height: $header-height;
 	position: fixed;
 	top: 0;
-	background: $color5;
 	transition: top 0.2s ease-in-out, background 0.2s ease-in-out;
 
 	#site-logo img {
@@ -60,7 +59,7 @@ $menu-line-height: 8px;
 	div {
 		height: $menu-line-height;
 		width: $menu-width;
-		background: white;
+		background: lightcoral;
 		margin-top: $menu-line-height;
 		margin-bottom: $menu-line-height;
 		border-radius: 15%;
@@ -194,7 +193,7 @@ header .main-navigation {
 
 		.nav-container:hover {
 			cursor: pointer;
-			background: $color3;
+			background: lightcoral;
 		}
 
 		a {
@@ -298,6 +297,70 @@ $home-background-color: rgb(35, 140, 130);
 	}
 }
 
+@keyframes rotate {
+	0% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes bounce {
+	0% {
+		transform: translateY(0)
+	}
+
+	50% {
+		transform: translateY(-3%);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes point-left {
+	0% {
+		transform: translateX(0);
+	}
+
+	50% {
+		transform: translateX(-5%);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes point-right {
+	0% {
+		transform: translateX(0);
+	}
+
+	50% {
+		transform: translateX(5%);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+
+.bounce:hover {
+	animation: bounce 1s infinite;
+}
+
+.point-left:hover {
+	animation: point-left 1s infinite;
+}
+
+.point-right:hover {
+	animation: point-right 1s infinite;
+}
 
 
 #home-background, .pixel-overlay, #home-background-overlay {
@@ -497,7 +560,7 @@ $home-background-color: rgb(35, 140, 130);
 				.title {
 					text-decoration: none;
 					font-size: 1.5em;
-					color: $color4;
+					color: black;
 					margin: 15px;
 				}
 
@@ -508,7 +571,15 @@ $home-background-color: rgb(35, 140, 130);
 						max-height: 150px;
 						max-width: 200px;
 					}
+
+					
 				}	
+
+				a.img-container:hover {
+					animation: bounce 1s infinite;
+
+
+				}
 
 				.info {
 					padding: 20px;
@@ -516,13 +587,17 @@ $home-background-color: rgb(35, 140, 130);
 					h3 {
 						margin: 15px;
 						font-weight: 800;
-						color: $color4;
+						color: black;
 						span {
 
 						}
 
 						a {
 							color: $color5;
+						}
+
+						a:hover {
+							color: $color3;
 						}
 					}
 				}
@@ -609,23 +684,28 @@ body.Work-page {
 			text-align: center;
 			margin-bottom: 40px;
 
-			h3.visit-page {
-				background: $color5;
-				display: inline-block;
-				padding: 10px;
-				padding-left: 20px;
-				padding-right: 20px;
+			.links {
+				margin: 15px;
 
 				a {
 					color: white;
-					text-decoration: none;	
+
+					h3.visit-page {
+						background: $color5;
+						display: inline-block;
+						min-width: 150px;
+						padding: 5px;		
+					}	
 				}
-				
+
+
+				h3.visit-page:hover{
+					cursor: pointer;
+					background: $color3;
+				}
 			}
 
-			h3.visit-page:hover{
-				background: $color4;
-			}
+			
 
 			.small-info {
 				margin: 0;
@@ -653,6 +733,7 @@ body.Work-page {
 				}
 			}
 
+
 			.thumbnail {
 				flex: 1;
 				display: flex;
@@ -661,6 +742,7 @@ body.Work-page {
 
 				a {
 					text-decoration: none;
+
 					img {
 						margin-left: 50px;
 						margin-right: 50px;
@@ -741,40 +823,99 @@ body.Work-page {
 		}
 	}
 
-	.visit-page {
+	
 
-		text-align: center;
-		background: $color5;
-		padding: 5px;
-		margin: 50px auto;
-		width: 100px;
-		height: 100px;
-		position: relative;
-		border-radius: 50%;
-
-		a {
-			text-height: 100%;
-			text-decoration: none;
-			color: white;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-		}		
-	}
-
-	.visit-page:hover {
-		background: $color4;
-	}
+	
 
 
 	.write-up {
 		background: rgb(230, 230, 230);
 		padding-bottom: 20px;
+		
+		.secondary-navigation {
+			position: relative;
+			text-align: center;
+			width: 100%;
+			margin: auto auto;
+
+			.prev {
+				position: absolute;
+				left: 15px;
+				top: 30%;
+
+				h5 {
+					color: black;
+					font-weight: 800;
+					display: none;
+					position: absolute;
+					left: 50px;
+					margin: 0;
+					line-height: 50px;
+					font-size: 1.2em;
+					min-width: 200px;
+				}
+
+				img {
+					height: 50px;
+				}
+			}
+
+			.next {
+				position: absolute;
+				right: 15px;
+				top: 30%;
+
+				h5 {
+					color: black;
+					font-weight: 800;
+					display: none;
+					position: absolute;
+					right: 50px;
+					margin: 0;
+					line-height: 50px;
+					font-size: 1.2em;
+					min-width: 200px;
+				}
+
+				img {
+					height: 50px;
+				}
+			}
+
+			.visit-page {
+
+				text-align: center;
+				background: $color5;
+				padding: 5px;
+				width: 100px;
+				height: 100px;
+				position: relative;
+				border-radius: 50%;
+				display: inline-block;
+
+				a {
+					text-height: 100%;
+					text-decoration: none;
+					color: white;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+
+				}
+			}
+
+			.visit-page:hover {
+				background: $color4;
+			}
+
+		}
+
+				
 
 		h3 {
-			background: $color4;
-			color: white;
+			color: $color4;
+			font-weight: 800;
 			font-size: 1.6em;
 			text-align: center;
 			margin: 0;
@@ -857,7 +998,7 @@ body.Blog-page, body.Contact-page {
 
 	a {
 		text-decoration: none;
-		color: orange;
+		color: lightpink;
 	}
 
 	.page {
@@ -989,7 +1130,7 @@ body.Contact-page {
 	.front-page div {
 		position: absolute;
 	    left: 50%;
-	    top: 50%;
+	    top: 55%;
 	    transform: translate(-50%, -50%);
 	}
 
@@ -1167,7 +1308,7 @@ footer.main-footer {
 		left: 0;
 		float: right;
 		height: $header-height;
-		border-bottom: 2px solid rgb(200, 244, 244);
+		border-bottom: 2px solid white;
 
 	}
 
@@ -1200,6 +1341,7 @@ footer.main-footer {
 	.Home-page {
 
 		.about-page, .what-do-page {
+			font-size: 1.2em;
 			display: flex;
 			flex-direction: row;
 			text-align: center;
@@ -1216,7 +1358,13 @@ footer.main-footer {
 				height: 25vw;
 				flex: 1;
 
+				.gear {
+					animation: rotate 10s linear infinite;
+				}
+
 				img {
+					padding-left: 30px;
+					padding-right: 30px;
 					height: 25vw;
 				}
 
@@ -1287,7 +1435,7 @@ footer.main-footer {
 			div {
 				position: absolute;
 			    left: 50%;
-			    top: 50%;
+			    top: 55%;
 			    transform: translate(-50%, -50%);
 			}
 		}
@@ -1339,38 +1487,59 @@ footer.main-footer {
 
 	.single-project {
 		position: absolute;
-		padding-top: $header-height*1.5;
+		padding-top: $header-height;
 		top: 0;
 		left: 0;
+		font-size: 1.2em;
 
 		.info {
 			width: 50%;
 			margin: auto auto;
-			min-height: 80vh
+			min-height: 580px;
 		}
 
 		.write-up {
 			h3 {
 				font-size: 2em;
-				padding: 15px;
+				padding: 30px;
 			}
 
 			.main-content {
-				display: inline-block;
-				width: 60%;
-				padding: 30px;
-				margin-left: 15px;
+				width: 50%;
+				margin: auto auto;
 			}
 
-			.visit-page {
-				display: inline-block;
-				margin: 0;
-				margin-left: 10%;
+			.secondary-navigation {
+
+				width: 65%;
+
+				.next {
+					right: 0px;
+
+					h5 {
+						display: inline-block;
+					}
+				}
+
+				.prev {
+					left: 0px;
+
+					h5 {
+						display: inline-block;
+					}
+				}
+
+				.visit-page {
+					height: 140px;
+					width: 140px
+				}
+
+				.visit-page:hover {
+					cursor: pointer;
+				}
 			}
 
-			.visit-page:hover {
-				cursor: pointer;
-			}
+			
 		}
 
 
@@ -1379,7 +1548,7 @@ footer.main-footer {
 
 }
 
-@media (max-height: $mobile) {
+@media (max-height: $mobile) and (max-width: $mobile) {
 	header .main-navigation {
 		.link-container {
 			width: 100%;
