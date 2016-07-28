@@ -371,7 +371,7 @@ $home-background-color: rgb(35, 140, 130);
 	background: url("../assets/imgs/me3.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: 80% 50%;
+	background-position: 40% 50%;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -554,7 +554,7 @@ $home-background-color: rgb(35, 140, 130);
 				text-align: center;
 				padding-top: 20px;
 				padding-bottom: 20px;
-				border-bottom: 2px solid $color4;
+				border-bottom: 2px dashed $color4;
 				background: rgb(230, 230, 230);
 
 				.title {
@@ -659,6 +659,7 @@ $home-background-color: rgb(35, 140, 130);
 *************************************************************/
 
 body.Work-page {
+
 	#menu-button {
 		div {
 			
@@ -788,6 +789,7 @@ body.Work-page {
 */
 
 .single-project {
+	background: white;
 
 	.info {
 		padding: 15px;

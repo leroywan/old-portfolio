@@ -7,8 +7,8 @@ layout: default
 <div class="page">
 	<article class="portfolio">
 		<div class="projects">
-		{% assign sorted_projects = site.categories.project | sort:"name" %}
-		{% for project in sorted_projects reversed %}
+		{% assign sorted_projects = site.categories.project | sort:"date" %}
+		{% for project in sorted_projects reversed%}
 			<div class="project">
 				<div class="thumbnail">
 					<a href="{{ project.url }}"">

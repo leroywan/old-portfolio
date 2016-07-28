@@ -1,12 +1,12 @@
 ---
 layout: single-project
 title:  "Code Shuttle"
-date:   2016-07-11 13:02:21 -0400
+date:   2016-07-18 13:02:21 -0400
 categories: project
 type: Website
 pageurl: http://codeshuttle.ca
 featured: true
-thumbnail: ../assets/photo-gallery/code-shuttle-logo.svg
+thumbnail: ../assets/project-thumbnail/code-shuttle-logo.svg
 tools: PHP(WordPress), JavaScript, HTML5, SCSS, Adobe Illustrator
 summary: |
   Web develoment website

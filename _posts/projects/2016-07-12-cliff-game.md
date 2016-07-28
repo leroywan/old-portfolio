@@ -1,13 +1,13 @@
 ---
 layout: single-project
 title:  "Cliff Game"
-date:   2016-07-19 13:02:21 -0400
+date:   2016-07-12 13:02:21 -0400
 categories: project
 type: Game
 pageurl: http://leroywan.github.io/CliffGame
 github: https://github.com/leroywan/CliffGame
 featured: true
-thumbnail: ../assets/photo-gallery/mr_square.svg
+thumbnail: ../assets/project-thumbnail/mr_square.svg
 tools: JavaScript, HTML5(Canvas), CSS3, Adobe Illustrator
 summary: |
   A game where you fall and dodge clouds.
