@@ -10,8 +10,7 @@ featured: true
 thumbnail: ../assets/project-thumbnail/mr_square.svg
 tools: JavaScript, HTML5(Canvas), CSS3, Adobe Illustrator
 summary: |
-  A game where you fall and dodge clouds.
-  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
+  Dodge the clouds, get the hearts, and try to last as long as possible down your freefall. The game starts with Mr.Square in the middle of a freefall and your objective is to dodge the clouds by using the arrow keys. Clouds and hearts are generated randomly and Mr.Square will fall faster and faster as the game progresses until he reaches terminal velocity. Distance and lives are recorded on the top of the screen so try to beat your own high score!
 ---
 This is a projectLorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
 Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.

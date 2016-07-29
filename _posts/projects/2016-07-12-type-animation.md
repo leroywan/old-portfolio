@@ -10,7 +10,7 @@ github: https://github.com/leroywan/type-animation
 thumbnail: ../assets/project-thumbnail/type-animation-icon.svg
 tools: JavaScript
 summary: |
-  The best travel planning app in the world! Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
+  Type animation is a JavaScript library that will animate any line of text in your HTML code as if someone was typing it out live. This library can be used even by people without knowledge of JavaScript; all it takes to create an animation is by adding a css class "type-animation" and your text will be animated! You also have the option to enable a blinking cursor by adding another css class called "enable-cursor".
 
 ---
 This is a projectLorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.

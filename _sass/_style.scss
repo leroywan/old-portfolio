@@ -833,6 +833,13 @@ body.Work-page {
 	.write-up {
 		background: rgb(230, 230, 230);
 		padding-bottom: 20px;
+
+		div {
+			h3 {
+				padding-top: 40px;
+			}
+		}
+		
 		
 		.secondary-navigation {
 			position: relative;
@@ -1353,6 +1360,10 @@ footer.main-footer {
 				flex: 1;
 				height: 25vw;
 				align-items: center;
+
+				p {
+					font-weight: 300;
+				}
 
 			}
 
