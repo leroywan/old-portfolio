@@ -59,7 +59,7 @@ $menu-line-height: 8px;
 	div {
 		height: $menu-line-height;
 		width: $menu-width;
-		background: lightcoral;
+		background: lightblue;
 		margin-top: $menu-line-height;
 		margin-bottom: $menu-line-height;
 		border-radius: 15%;
@@ -970,7 +970,9 @@ body.Work-page {
 .pace-done .page-background-overlay{
 	animation: diagonal-drop 1s ease-in-out;
 }
-
+body.Contact-page.pace-done {
+	background: $color5;
+}
 
 body.Blog-page, body.Contact-page {
 
