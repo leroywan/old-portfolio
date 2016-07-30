@@ -12,12 +12,17 @@
   }
 }
 
-body {
-    background: #e6e6e6;
+
+body.pace-done {
+  background: white;
 }
 
 body.pace-running {
+  background: #e6e6e6;
+}
 
+body.Work-page {
+    background: #e6e6e6;
 }
 
 .pace {

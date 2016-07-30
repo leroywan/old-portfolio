@@ -256,7 +256,7 @@ header .main-navigation {
 ==================   FRONT PAGE      ==========================
 
 *************************************************************/
-$home-background-color: rgb(35, 140, 130);
+
 
 @keyframes fade-in {
 	from {
@@ -1462,6 +1462,27 @@ footer.main-footer {
 			    left: 50%;
 			    top: 55%;
 			    transform: translate(-50%, -50%);
+			}
+		}
+
+	}
+
+	body.Contact-page {
+
+		.content-within-default {
+			padding: 0;
+		}
+
+		.main-content {
+			flex-direction: row;
+			align-items: center;
+
+			.contact-info {
+				flex: 1;
+			}
+
+			.contact-form {
+				flex: 1;
 			}
 		}
 
