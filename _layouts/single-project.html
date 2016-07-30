@@ -21,7 +21,17 @@ layout: default
 		<div>
 			<h3> The Story </h3>
 		<div>
-		<div class="main-content"><p> {{ page.content }} </p></div>
+		<div class="main-content">
+			{% assign content = page.content | strip_newlines %}
+			{% if content != "" %}
+			<p>{{ page.content }}</p>
+			{% else %}
+			<div>
+				<img class="content-not-found" src="/assets/icons/content-not-found.svg"/>
+				<h4><strong>Sorry, the story for this project is yet to be told!</strong></h4>
+			</div>
+			{% endif %}
+		</div>
 		<div class="secondary-navigation">
 				{% for project in site.categories.project %}
 			        {% if project.url == page.url %}

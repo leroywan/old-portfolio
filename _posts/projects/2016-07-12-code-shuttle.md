@@ -9,7 +9,7 @@ featured: true
 thumbnail: ../assets/project-thumbnail/code-shuttle-logo.svg
 tools: PHP(WordPress), JavaScript, HTML5, SCSS, Adobe Illustrator
 summary:  
-  A WordPress theme created for my web development business with a blog page and a contact form. 
+  A WordPress theme created for Code Shuttle, my web development business. The theme also supports a blog page and a contact form.
 ---
 This is a projectLorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
 Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.

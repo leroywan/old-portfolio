@@ -2,6 +2,11 @@
 layout: home
 title: Home
 permalink: /
+caption: and I'm a tinkerer.
+about_me: |
+   My name is Leroy Wan and welcome to my website! I am a software developer currently studying rocks at Queen's University in Kingston Ontario. I really like wrting code, collecting vintage bicycles, making music, and watching how-to videos. As a person who love making things, I am always working on side projects that will be posted on this website so stay tuned!
+what_do: |
+   As a student without much responsibility, the only thing I focus on is to learn as much as I can. I am currently reading a lot of materials to improve my understanding of computer science. My goal is to be have to ability to make anything imaginable using elegant code. In my spare time, I am a bike mechanic that restores and sells vintage bicycles that I have collected.
 ---
 
 <div class="about-page">
@@ -10,9 +15,7 @@ permalink: /
 		<h1>About Me</h1>
     </div>
     <div class="about-me">
-		<p>
-			My name is Leroy Wan and welcome to my website! I am a software developer currently studying rocks at Queen's University in Kingston Ontario. I really like wrting code, collecting vintage bicycles, making music, and watching how-to videos. As a person who love making things, I am always working on side projects that will be posted on this website so stay tuned!
-		</p>
+		<p> {{ page.about_me }}</p>
     </div>
 </div>
 <div class="what-do-page">
@@ -21,9 +24,7 @@ permalink: /
 		<h1>What I Do</h1>
     </div>
     <div class="what-do">
-		<p>
-	    	As a student without much responsibility, the only thing I focus on is to learn as much as I can. I am currently reading a lot of materials to improve my understanding of computer science. My goal is to be have to ability to make anything imaginable using elegant code. In my spare time, I am a bike mechanic that restores and sells vintage bicycles that I have collected.
-		</p>
+		<p>{{ page.what_do }}</p>
     </div>
 </div>
 <div class="featured-work">
@@ -31,9 +32,13 @@ permalink: /
 	<div class="projects">
 	{% for project in site.categories.project | sort: "featured" %}  
 		{% if project.featured %}
-		<a><div class="project">
-			<h2><a class="title" href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a></h2>
-			<a class="img-container" href="{{ site.baseurl }}{{ project.url }}"><img src="{{ project.thumbnail }}"/></a>
+		<div class="project">
+			<h2>
+				<a class="title" href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a>
+			</h2>
+			<a class="img-container" href="{{ site.baseurl }}{{ project.url }}">
+				<img src="{{ project.thumbnail }}"/>
+			</a>
 			<div class="info">
 				<h3>Category: <span>{{ project.type }}</span></h3>
 				{% if project.pageurl %}
