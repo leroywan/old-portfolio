@@ -16,12 +16,12 @@ permalink: /contact/
 	</div>
 	<div class="contact-form"> 
 		<h2 class="heading">Contact Form</h2>
-		<form action="https://formspree.io/leroywan@gmail.com"
-		      method="POST">
-		    <input type="text" name="name" placeholder="Enter Your Name">
-		    <input type="email" name="_replyto" placeholder="Enter Your Email">
+		<form method="POST" action="https://www.formingo.co/submit/leroywan@gmail.com">
+		    <input type="text" name="full_name" placeholder="Your Name">
+		    <input type="email" name="__replyto" placeholder="Your Email">
 		    <textarea type="text" name="message" placeholder="Your Message"></textarea>
-		    <input class="submit" type="submit" value="Send">
+		    <input type="hidden" name="__redirect" value="http://leroywan.github.io">
+		    <input type="submit" class="submit" value="Contact">
 		</form>
 	</div>
 </div>

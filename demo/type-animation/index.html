@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Type-Animation</title>
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:600,400,300,200,900' rel='stylesheet' type='text/css'>
+	<style>
+		@keyframes fadein {
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+
+		html, body {
+			padding: 0;
+			margin: 0;
+			font-family: 'Source Sans Pro', sans-serif;
+			overflow-x: hidden;
+			width: 100%;
+			color: #333333;
+		}
+
+		h1.heading {
+			font-size: 5em;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
+		h2.heading {
+			font-size: 3em;
+		}
+
+		p {
+			font-size: 1.5em;
+			font-weight: 400;
+			padding-bottom: 30px;
+		}
+
+		div code {
+			font-size: 1.8em;
+			padding: 20px;
+			width: 100%;
+		}
+
+		p code {
+			font-size: 1.2em;
+		}
+
+		.note {
+			font-style: italic;
+			font-size: 1em;
+		}
+
+		.comment {
+			color: grey;
+		}
+
+		.italic {
+			font-style: italic;
+		}
+
+		.button {
+			cursor: pointer;
+			background: #333333;
+			color: white;
+			border-radius: 10%;
+			padding: 10px;
+		}
+
+		.button:hover {
+			color: lightgreen;
+		}
+
+
+		.input {
+			padding: 20px;
+			background: rgba(255, 255, 255, 0.4);
+			margin-bottom: 30px;
+		}
+
+		.output {
+			padding: 20px;
+			background: rgba(255, 255, 255, 0.4);
+		}
+
+		.page {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+
+		#page-container {
+			display: flex;
+			flex-direction: column;
+		}
+
+		#navigation {
+			border-radius: 50%;
+			height: 200px;
+			width: 200px;
+			position: absolute;
+			background: #333333;
+			color: rgb(172, 210, 205);
+			right: 30px;
+			top: 30px;
+			animation: 1s fadein linear;
+			animation-play-state: paused;
+		}
+
+		#demo, #installation, #documentation {
+			cursor: pointer;
+			width: 100%;
+			line-height: 120px;
+			text-align: center;
+			margin: 0 auto;
+			width: 50%;
+			height: 50%;
+			position: absolute;
+			font-size: 1.2em;
+			font-weight: 600;
+		}
+
+		#demo:hover, #installation:hover, #documentation:hover {
+			color: white;
+		}
+
+		#documentation {
+			border-left: 3px solid rgb(172, 210, 205);
+			border-bottom: 3px solid rgb(172, 210, 205);
+		}
+
+
+
+		#demo {
+			left: -1px;
+			border-right: 3px solid rgb(172, 210, 205);
+			border-bottom: 3px solid rgb(172, 210, 205);
+		}
+
+
+
+		#installation {
+			line-height: 80px;
+			width: 100%;
+			bottom: -4px;
+			border-top: 3px solid rgb(172, 210, 205);
+		}
+
+
+		#documentation {
+			right: 0;
+		}
+		#front-page {
+			height: 100vh;
+			overflow-x: hidden;
+			font-weight: 300;
+			background: rgb(172,210,205);
+			color: #333333;
+		}
+
+
+		#intro-container {
+			height: 35vh;
+			position: absolute;
+			bottom: 25vh;
+			width: 95%;
+		}
+
+		#intro {
+			margin: 0;
+			font-size: 7em;
+			font-weight: 900;
+		}
+
+		#intro-description {
+			font-size: 3em;
+			font-weight: 900;
+		}
+
+		#created-by {
+			position: absolute;
+			right: 0;
+			margin: 0;
+			font-weight: 400;
+		}
+
+
+
+		/****************************
+				DEMO PAGE
+		*****************************/
+
+		#demo-page-1 {
+			background: #cddbe4;
+		}
+
+		#demo-page-2 {
+			background: #eddde7;
+		}
+
+		#demo-page-3 {
+			background: #feffeb;
+		}
+
+		#demo-page-4 {
+			background: #ffe8d6;
+		}
+
+		#demo-page-5 {
+			background: #D2BAAC;
+		}
+
+		#demo-page-6 {
+			background: #d2cdac;
+		}
+
+		#demo-page-7 {
+			background: #ffd1e4;
+		}
+
+
+		/****************************
+				DOC PAGE
+		*****************************/
+
+
+
+
+
+
+		/****************************
+				INSTALLATION PAGE
+		*****************************/
+
+
+		@media (max-width: 1080px){
+
+			#intro-container {
+				bottom: 70px;
+			}
+
+			#intro {
+				font-size: 5em;
+			}
+
+			#intro-description {
+				font-size: 1.8em;
+			}
+		}
+
+		@media (max-width: 760px){
+
+			#navigation {
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+
+			#intro-container {
+				left: 50%;
+				top: 20%;
+				transform: translate(-50%, -50%);
+				font-size: 0.6em;
+				text-align: center;
+
+			}
+
+
+			h1, h2, h3, h4, h5, h6, p, a, div code{
+				font-size: 1em;
+			}
+
+			h1.heading {
+				font-size: 4em;
+				text-align: center;
+			}
+
+			h2.heading {
+				font-size: 2em;
+			}
+
+			p.note {
+				font-size: 0.7em;
+			}
+
+			span.button {
+				padding: 2px;
+			}
+
+
+
+		}
+
+		@media (max-width: 460px) {
+
+			#intro-container {
+
+			}
+
+			#intro {
+				font-size: 3em;
+			}
+
+			#intro-description {
+				font-size: 1.4em;
+			}
+
+			#created-by {
+				font-size: 0.8em;
+			}
+
+			h2.heading {
+				font-size: 1.2em;
+			}
+
+			.page {
+				padding: 8px;
+				margin: 0;
+			}
+
+		}
+	</style>
+</head>
+<body>
+	<div id="page-container">
+		<span id="navigation">
+			<span id="demo" class="type-animation-trigger">Demo</span>
+			<span id="documentation" class="type-animation-trigger">Docs</span>
+			<span id="installation" class="type-animation-trigger">Installation</span>
+		</span>
+		<div id="front-page" class="page">
+			<div id="intro-container">
+				<h1 id="intro" class="type-animation-trigger enable-cursor">Type-Animation.js</h1>
+				<h2 id="intro-description" class="type-animation-trigger">Simple Animated Typing For Your Websites</h2>
+				<h3 id="created-by" class="type-animation-trigger">Created by Leroy Wan</h3>
+			</div>
+		</div>
+		<div id="demo-page-1" class="page">
+			<h1 class="heading">Demo</h1>
+			<div>
+				<h2 class="heading">Demo #1 - Simple Lazy Code (No CSS or Javscript Needed!)</h2>
+				<p>All you need to do is add a class name of "type-animation" to your tags and watch the magic happen.</p>
+			</div>
+			<div class="input">
+				<h3>Input:</h3>
+				<code>
+					&ltp class="type-animation"&gt This is the first demo. I am executed once the page loads! &lt/p&gt
+				</code>
+			</div>
+			<div class="output">
+				<h3>Output:</h3>
+				<p class="type-animation"> This is the first demo. I am executed once the page loads! </p>
+			</div>
+			<p class="note">*Note that this is animation begins right after the page loads. Restart (F5) the page to see the animation again. </p>
+		</div>
+		<div id="demo-page-2" class="page">
+			<div>
+				<h2 class="heading">Demo #2 - Blinking Text Cursor Without CSS? </h2>
+				<p>Add a class name of "enable-cursor" to your "type-animation" tags and you are good to go!</p>
+			</div>
+			<div class="input">
+				<h3>Input:</h3>
+				<code>
+					&ltp class="type-animation enable-cursor"&gt This is the second demo. I come with a cursor enabled! &lt/p&gt
+				</code>
+			</div>
+			<div class="output">
+				<h3>Output:</h3>
+				<p class="type-animation enable-cursor"> This is the second demo. I come with a cursor enabled! </p>
+			</div>
+			<p class="note">*Note that this is animation begins right after the page loads. Restart (F5) the page to see the animation again. </p>
+		</div>
+		<div id="demo-page-3" class="page">
+			<div>
+				<h2 class="heading">Demo #3 - Lets Race to See Who's Faster! </h2>
+				<p>Add the class names "type-animation-slow" or "type-animation-fast" to control the speed of your animation</p>
+			</div>
+			<div class="input">
+				<h3>Input:</h3>
+				<code>
+					&ltp class="type-animation-slow enable-cursor"&gt This is the third demo. I feel like I am kinda slow at this. &lt/p&gt
+				</code><br><br>
+				<code>
+					&ltp class="type-animation-fast enable-cursor"&gt This is the third demo. I am totally gonna win this race thing! &lt/p&gt
+				</code>
+			</div>
+			<div class="output">
+				<h3>Output:</h3>
+				<p class="type-animation-slow enable-cursor"> This is the third demo. I feel like I am kinda slow at this. </p>
+				<p class="type-animation-fast enable-cursor"> This is the third demo. I am totally gonna win this race thing!</p>
+			</div>
+			<p class="note">*Note that this is animation begins right after the page loads. Restart (F5) the page to see the animation again. </p>
+		</div>
+		<div id="demo-page-4" class="page">
+			<div>
+				<h2 class="heading">Demo #4 - Did I Hear an Event Triggered? </h2>
+				<p>This is where the JavaScript kicks in. In your HTML file, add the class "type-animation-trigger-once" to your tag and see what happens!</p>
+			</div>
+			<div class="input">
+				<h3>Input:</h3>
+				<code>
+					&ltp id="demo-4-content" class="type-animation-trigger-once"&gt This is the fourth demo. I'll show up whenever you want me to show up! &lt/p&gt
+				</code>
+			</div>
+			<div class="output">
+				<h3>Output:</h3>
+				<p id="demo-4-content" class="type-animation-trigger-once"> This is the fourth demo. I'll show up whenever you want me to show up! </p>
+			</div>
+			<p>Nothing will show up until this button is pressed <span id="demo-4-button" class="button">PRESS ME!</span></p>
+			<div class="input">
+				<h3>Javascript: </h3>
+				<code>
+					<br>var demo4Button = document.getElementById('demo-4-button');<br>
+					var demo4Content = document.getElementById('demo-4-content');<br><br>
+
+					<span class="comment">//start animation of element with the ID demo4Content once click event is triggered</span>
+					demo4Button.addEventListener('click', function(){<br>
+
+
+					&emsp;&emsp;demo4Content.typeAnimation.play();<br>
+
+					})
+				</code>
+			</div>
+			<p class="italic">Usage: element.typeAnimation.play()</p>
+			<p>The class <code>"type-animation-trigger-once"</code> assigns the object <code>typeAnimation</code> to your element which contains the <code>play()</code> method. Upon a trigger of an event such as a button click or scrolling, the element will be animated.<br><p class="note">*Note that this animation can only be triggered once. Use <code>class="type-animation-trigger"</code> for repeated animation</p></p>
+		</div>
+		<div id="demo-page-5" class="page">
+			<div>
+				<h2 class="heading">Demo #5 - Repeat, Repeat, Faster! </h2>
+				<p>Using the JavaScript rule as demo #4, add the class <code>"type-animation-trigger"</code> to repeat your animation instead! Also, the <code>play()</code> method by default has a speed set to 60. The lower the number the faster the animation runs!</p>
+				<p class="italic">Usage: element.typeAnimation.play(speed)</p>
+			</div>
+			<div class="input">
+				<h3>Input:</h3>
+				<code>
+					<br>&ltp id="demo-5-content" class="type-animation-trigger"&gt<br>&emsp;&emsp;This is the fifth demo. I can repeat and I am faster than normal! <br>&lt/p&gt<br>
+				</code>
+				<h3>Javascript:</h3>
+				<code>
+					<br><span class="comment">//start animation of element with the ID demo5Content once click event is triggered</span>
+					demo5Button.addEventListener('click', function(){<br>
+
+
+					&emsp;&emsp;demo5Content.typeAnimation.play(15);<br>
+
+					})
+				</code>
+			</div>
+			<div class="output">
+				<h3>Output:</h3>
+				<p id="demo-5-content" class="type-animation-trigger"> This is the fifth demo. I can repeat and I am faster than normal! </p>
+			</div>
+			<p>Nothing will show up until this button is pressed <span id="demo-5-button" class="button">PRESS ME!</span></p>
+		</div>
+		<div id="demo-page-6" class="page">
+			<div>
+				<h2 class="heading">Demo #6 - Lets Start Linking Things Together! </h2>
+				<p> Add the class <code>"type-animation-trigger"</code> to your element and you can manipulate what occurs after the animation reaches completion!</p>
+				<p class="italic">Usage: element.typeAnimation.play(speed, callback)</p>
+			</div>
+			<div class="input">
+				<h3>Input:</h3>
+				<code>
+					<br>&ltp id="demo-6-content" class="type-animation-trigger"&gt<br>&emsp;&emsp;This is the sixth demo. I can start being creative with my callback functions! <br>&lt/p&gt<br>
+				</code>
+				<h3>Javascript:</h3>
+				<code>
+					<br><span class="comment">//start animation of element with the ID demo6Content once click event is triggered</span>
+					demo6Button.addEventListener('click', function(){<br>
+
+
+					&emsp;&emsp;demo6Content.typeAnimation.play(15, function(){<br>
+					&emsp;&emsp;&emsp;&emsp;alert('It works!')<br>
+					&emsp;&emsp;&emsp;&emsp;<span class="comment">//Hint: You can link animations together to have them play one after the other</span><br><br>
+					&emsp;&emsp;&emsp;&emsp;<span class="comment">anotherElement.typeAnimation.play(50) <-runs after completion</span><br>
+
+					&emsp;&emsp;});<br>
+
+					})
+				</code>
+			</div>
+			<div class="output">
+				<h3>Output:</h3>
+				<p id="demo-6-content" class="type-animation-trigger"> This is the sixth demo. I can start being creative with my callback functions! </p>
+			</div>
+			<p> The callback (with the alert) will run when the animation ends <span id="demo-6-button" class="button">PRESS ME!</span></p>
+		</div>
+		<div id="demo-page-7" class="page">
+			<div>
+				<h2 class="heading">Demo #7 - Special Characters? </h2>
+				<p> The characters <code>`</code> and <code> @ </code> gives you the ability to indent and create linebreaks. The characters can be escaped using an \</p>
+				<p class="italic">Usage: @ = linebreak, ` = 5 spaces</p>
+			</div>
+			<div class="input">
+				<h3>Input:</h3>
+				<code>
+					<br>&ltp id="demo-7-content" class="type-animation-trigger enable-cursor"&gt<br>This is the seventh demo. Here is 1 line break@Here are 2 linebreaks@@And now a linebreak with an indentation!@`You can imitate writing code like this!@@Example:@@function(){@`alert('this is awesome!')@};@@Escape character example: type-animation\@example.com<br>&lt/p&gt<br>
+				</code>
+			</div>
+			<div class="output">
+				<h3>Output:</h3>
+				<p id="demo-7-content" class="type-animation-trigger enable-cursor"> This is the seventh demo. Here is 1 line break@Here are 2 linebreaks@@And now a linebreak with an indentation!@`Imitate writing code like this!@@Example:@@function(){@`alert('this is awesome!')@};@@Escape character example: type-animation\@example.com</p>
+			</div>
+			<p>  <span id="demo-7-button" class="button">PRESS ME!</span></p>
+			<p class="note">*Note the javascript code is not included. Refer to previous demos for javascript code. </p>
+		</div>
+	</div>
+	<script src="./typeAnimation.js"></script>
+	<script src="./app.js"></script>
+</body>
+</html>

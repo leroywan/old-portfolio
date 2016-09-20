@@ -5,7 +5,7 @@ date:   2016-07-19 13:02:21 -0400
 categories: project
 type: Developer Tool
 featured: true
-pageurl: http://codeshuttle.ca/demo/type-animation
+pageurl: https://leroywan.github.io/demo/type-animation
 github: https://github.com/leroywan/type-animation
 thumbnail: ../assets/project-thumbnail/type-animation-icon.svg
 tools: JavaScript
