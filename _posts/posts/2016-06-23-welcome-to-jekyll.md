@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "This is not a real blog"
 date:   2016-06-23 17:05:21 -0400
 categories: blog
 author: Leroy Wan
