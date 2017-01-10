@@ -5,7 +5,7 @@ date:   2016-07-18 13:02:21 -0400
 categories: project
 type: Website
 pageurl: http://codeshuttle.ca
-featured: true
+featured: false
 thumbnail: ../assets/project-thumbnail/code-shuttle-logo.svg
 tools: PHP(WordPress), JavaScript, HTML5, SCSS, Adobe Illustrator
 summary:  
